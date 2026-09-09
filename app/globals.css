@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 28% 5%;
+    --foreground: 220 40% 95%;
+    --card: 220 28% 7%;
+    --card-foreground: 220 40% 95%;
+    --popover: 220 28% 7%;
+    --popover-foreground: 220 40% 95%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 220 40% 95%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 215 16% 65%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --ring: 38 92% 50%;
+    --radius: 0.5rem;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #090c10;
+    color: #dfe2ee;
+    font-family: var(--font-geist), 'Geist', sans-serif;
+  }
+
+  * {
+    @apply border-border-subtle;
+  }
+
+  body {
+    @apply bg-surface text-on-surface selection:bg-gold-accent selection:text-black min-h-screen flex flex-col antialiased;
+  }
+}
+
+@layer components {
+  .text-glow-gold {
+    text-shadow: 0 0 24px rgba(245, 158, 11, 0.25);
+  }
+
+  .glass-card {
+    @apply bg-white/[0.02] border border-border-subtle rounded-xl backdrop-blur-md;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:bg-white/[0.05] hover:border-gold-accent/40;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-16;
+  }
+}
+
+/* Custom scrollbar matching Stitch design */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090c10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262a33;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #39485a;
+}
+
+/* Hide scrollbar on horizontal carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
