@@ -47,11 +47,11 @@ export default function Header() {
         {/* Glass backdrop */}
         <div className="absolute inset-0 bg-[#090c10]/90 backdrop-blur-2xl border-b border-white/[0.07]" />
 
-        <div className="relative max-w-[1400px] mx-auto px-6 h-[68px] flex items-center justify-between">
+        <div className="relative max-w-[1400px] mx-auto px-6 h-[60px] sm:h-[68px] flex items-center justify-between">
 
           {/* Official Brand Logo — Transparent */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="relative h-12 w-48 sm:w-56 overflow-hidden group-hover:scale-[1.02] transition-transform duration-300">
+            <div className="relative h-10 w-36 sm:h-12 sm:w-48 md:w-56 overflow-hidden group-hover:scale-[1.02] transition-transform duration-300">
               <Image
                 src="/images/logo.png"
                 alt="Anand Sports Logo"
@@ -100,7 +100,7 @@ export default function Header() {
 
           {/* Mobile Hamburger */}
           <button
-            className="lg:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 text-white/70 hover:text-white hover:border-white/20 transition-all"
+            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg border border-white/10 text-white/70 hover:text-white hover:border-white/20 transition-all"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -109,32 +109,30 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Drawer */}
-        {menuOpen && (
-          <div className="lg:hidden relative bg-[#090c10]/98 backdrop-blur-2xl border-t border-white/[0.07] px-6 py-5 flex flex-col gap-1">
-            {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMenuOpen(false)}
-                className={`px-4 py-3 rounded-xl text-[15px] font-medium tracking-wide transition-all ${
-                  pathname === href ? 'text-gold-light bg-gold-accent/10' : 'text-white/60 hover:text-white hover:bg-white/[0.05]'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
-            <div className="mt-3 pt-3 border-t border-white/[0.07]">
-              <Link
-                href="/contact"
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold text-[14px] tracking-wide"
-              >
-                <span className="material-symbols-outlined text-[16px]">call</span>
-                Get in Touch
-              </Link>
-            </div>
+        <div className={`lg:hidden relative bg-[#090c10]/98 backdrop-blur-2xl border-t border-white/[0.07] px-4 sm:px-6 flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-[500px] py-4 opacity-100' : 'max-h-0 py-0 opacity-0 border-transparent'}`}>
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setMenuOpen(false)}
+              className={`px-4 py-3.5 rounded-xl text-[15px] font-medium tracking-wide transition-all ${
+                pathname === href ? 'text-gold-light bg-gold-accent/10' : 'text-white/60 hover:text-white hover:bg-white/[0.05]'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+          <div className="mt-3 pt-3 border-t border-white/[0.07]">
+            <Link
+              href="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold text-[14px] tracking-wide"
+            >
+              <span className="material-symbols-outlined text-[16px]">call</span>
+              Get in Touch
+            </Link>
           </div>
-        )}
+        </div>
       </header>
     </>
   );

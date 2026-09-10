@@ -236,7 +236,7 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-surface">
       {/* Header Banner */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
+      <section className="relative py-14 sm:py-20 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(245,158,11,0.08),transparent)] pointer-events-none" />
 
         <div className="relative max-w-3xl mx-auto space-y-4">
@@ -245,7 +245,7 @@ export default function GalleryPage() {
             Original Gallery &amp; Event Archive &bull; Est. 1984
           </div>
 
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl uppercase tracking-tight text-white">
+          <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-6xl uppercase tracking-tight text-white">
             Photo Gallery &amp; Events
           </h1>
 
@@ -258,14 +258,14 @@ export default function GalleryPage() {
       {/* Main Gallery Section */}
       <section className="max-w-[1360px] mx-auto px-4 md:px-8 py-14">
         {/* Album Filter Tabs */}
-        <div className="flex items-center justify-center flex-wrap gap-2.5 mb-14">
+        <div className="flex items-center lg:justify-center gap-2 sm:gap-2.5 mb-10 sm:mb-14 overflow-x-auto scrollbar-hide pb-2 lg:flex-wrap lg:overflow-visible lg:pb-0">
           {albums.map((tab) => {
             const active = activeAlbum === tab.id;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveAlbum(tab.id)}
-                className={`px-5 py-2.5 rounded-xl font-caps uppercase tracking-wider text-[12px] font-medium transition-all duration-200 flex items-center gap-2 ${
+                className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-caps uppercase tracking-wider text-[12px] font-medium transition-all duration-200 flex items-center gap-2 whitespace-nowrap shrink-0 ${
                   active
                     ? 'bg-gradient-to-r from-gold-accent to-amber-500 text-black shadow-[0_4px_16px_rgba(245,158,11,0.3)] font-bold'
                     : 'bg-white/[0.03] hover:bg-white/[0.07] text-white/70 hover:text-white border border-border-medium'
@@ -321,7 +321,7 @@ export default function GalleryPage() {
               {/* Title & Caption */}
               <div className="p-5 flex flex-col space-y-2 flex-1 justify-between">
                 <div className="space-y-1">
-                  <h3 className="font-display font-bold text-[17px] text-white uppercase group-hover:text-gold-light transition-colors leading-snug">
+                  <h3 className="font-display font-bold text-[15px] sm:text-[17px] text-white uppercase group-hover:text-gold-light transition-colors leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-[12.5px] text-on-surface-variant font-light leading-relaxed">
@@ -342,8 +342,8 @@ export default function GalleryPage() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-20 p-10 rounded-2xl bg-gradient-to-r from-white/[0.03] via-white/[0.05] to-white/[0.03] border border-gold-accent/30 text-center space-y-4">
-          <h2 className="font-display font-bold text-2xl uppercase tracking-tight text-white">
+        <div className="mt-14 p-6 sm:mt-20 sm:p-10 rounded-2xl bg-gradient-to-r from-white/[0.03] via-white/[0.05] to-white/[0.03] border border-gold-accent/30 text-center space-y-4">
+          <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-tight text-white">
             Have Questions About Wholesale Supplies or Official Events?
           </h2>
           <p className="text-on-surface-variant text-[14px] font-light max-w-xl mx-auto">
@@ -365,16 +365,16 @@ export default function GalleryPage() {
       {currentPhoto && (
         <div
           onClick={() => setLightboxIndex(null)}
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 cursor-pointer select-none animate-fade-in"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 cursor-pointer select-none animate-fade-in"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl w-full bg-[#090c10] border border-white/20 rounded-2xl overflow-hidden shadow-2xl flex flex-col cursor-default"
+            className="relative max-w-5xl w-full bg-[#090c10] border border-white/20 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl flex flex-col cursor-default max-h-[95vh]"
           >
             {/* Close Button */}
             <button
               onClick={() => setLightboxIndex(null)}
-              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
             >
               <span className="material-symbols-outlined text-[22px]">close</span>
             </button>
@@ -382,7 +382,7 @@ export default function GalleryPage() {
             {/* Previous Button */}
             <button
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
             >
               <span className="material-symbols-outlined text-[24px]">chevron_left</span>
             </button>
@@ -390,7 +390,7 @@ export default function GalleryPage() {
             {/* Next Button */}
             <button
               onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
             >
               <span className="material-symbols-outlined text-[24px]">chevron_right</span>
             </button>
@@ -405,7 +405,7 @@ export default function GalleryPage() {
             </div>
 
             {/* Modal Footer */}
-            <div className="p-6 bg-surface-container-low flex flex-col space-y-2 border-t border-white/10">
+            <div className="p-4 sm:p-6 bg-surface-container-low flex flex-col space-y-2 border-t border-white/10">
               <div className="flex items-center justify-between">
                 <span className="px-3 py-1 rounded-lg bg-gold-accent/15 border border-gold-accent/30 text-gold-light font-caps uppercase text-[11px] font-medium">
                   {currentPhoto.albumName}
@@ -414,7 +414,7 @@ export default function GalleryPage() {
                   {lightboxIndex! + 1} / {displayedPhotos.length}
                 </span>
               </div>
-              <h3 className="font-display font-bold text-[22px] text-white uppercase">
+              <h3 className="font-display font-bold text-[17px] sm:text-[22px] text-white uppercase">
                 {currentPhoto.title}
               </h3>
               <p className="text-[14px] text-on-surface-variant font-light">

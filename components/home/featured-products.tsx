@@ -46,17 +46,17 @@ const categories = [
 
 export function FeaturedProducts() {
   return (
-    <section className="w-full bg-surface py-24 border-b border-border-subtle overflow-hidden" id="collections">
+    <section className="w-full bg-surface py-14 sm:py-24 border-b border-border-subtle overflow-hidden" id="collections">
       <div className="max-w-[1360px] mx-auto px-4 md:px-8">
         {/* Header */}
         <Reveal variant="down">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-14">
             <div>
               <div className="inline-flex items-center gap-2 text-gold-light font-caps uppercase tracking-widest text-[12px] font-semibold mb-3">
                 <span className="material-symbols-outlined text-[16px]">category</span>
                 Curated Wholesale Catalog
               </div>
-              <h2 className="font-display font-bold text-[32px] sm:text-[44px] uppercase tracking-tight text-white leading-tight">
+              <h2 className="font-display font-bold text-[26px] sm:text-[32px] md:text-[44px] uppercase tracking-tight text-white leading-tight">
                 Sports Collection
               </h2>
             </div>
@@ -87,7 +87,7 @@ export function FeaturedProducts() {
                 className="h-full flex flex-col justify-between"
               >
                 {/* Image Showcase */}
-                <div className="relative h-60 sm:h-64 overflow-hidden bg-black/60 flex-shrink-0">
+                <div className="relative h-48 sm:h-60 md:h-64 overflow-hidden bg-black/60 flex-shrink-0">
                   <img
                     alt={cat.label}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100"
@@ -104,7 +104,7 @@ export function FeaturedProducts() {
                 </div>
 
                 {/* Content Details */}
-                <div className="p-6 flex flex-col justify-between flex-1 space-y-4 relative z-30">
+                <div className="p-4 sm:p-6 flex flex-col justify-between flex-1 space-y-4 relative z-30">
                   <div className="space-y-2.5">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl bg-gold-accent/15 border border-gold-accent/40 flex items-center justify-center group-hover:bg-gold-accent group-hover:text-black transition-all duration-300 shadow-md">
@@ -112,7 +112,7 @@ export function FeaturedProducts() {
                           {cat.icon}
                         </span>
                       </div>
-                      <h3 className="font-display font-bold text-[22px] uppercase text-white tracking-wide group-hover:text-gold-light transition-colors">
+                      <h3 className="font-display font-bold text-[18px] sm:text-[22px] uppercase text-white tracking-wide group-hover:text-gold-light transition-colors">
                         {cat.label}
                       </h3>
                     </div>

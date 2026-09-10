@@ -15,7 +15,7 @@ export function HeroBanner() {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden bg-surface pt-24 pb-20 border-b border-border-subtle min-h-[92vh] flex items-center"
+      className="relative w-full overflow-hidden bg-surface pt-16 pb-14 sm:pt-24 sm:pb-20 border-b border-border-subtle min-h-[80vh] sm:min-h-[92vh] flex items-center"
     >
       {/* Background image + overlays */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -42,7 +42,7 @@ export function HeroBanner() {
 
           {/* Headline */}
           <Reveal delay={250} variant="up">
-            <h1 className="font-display font-extrabold text-[52px] sm:text-[64px] lg:text-[76px] leading-[1.03] tracking-tight text-white">
+            <h1 className="font-display font-extrabold text-[36px] sm:text-[52px] md:text-[64px] lg:text-[76px] leading-[1.03] tracking-tight text-white">
               Stay fit{' '}
               <span className="text-gold-accent text-glow-gold">live</span>
               <br />
@@ -52,7 +52,7 @@ export function HeroBanner() {
 
           {/* Sub-text */}
           <Reveal delay={400} variant="fade">
-            <p className="text-[18px] sm:text-[20px] text-white/75 font-light leading-relaxed max-w-lg">
+            <p className="text-[15px] sm:text-[18px] md:text-[20px] text-white/75 font-light leading-relaxed max-w-lg">
               Recharge your game with super-branded sports equipment.
             </p>
           </Reveal>
@@ -62,7 +62,7 @@ export function HeroBanner() {
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/products"
-                className="px-9 py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 hover:from-amber-400 hover:to-gold-light text-black font-semibold font-caps uppercase tracking-wider text-[13px] shadow-[0_12px_30px_rgba(245,158,11,0.3)] flex items-center gap-2 transition-all group"
+                className="px-7 py-3 sm:px-9 sm:py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 hover:from-amber-400 hover:to-gold-light text-black font-semibold font-caps uppercase tracking-wider text-[13px] shadow-[0_12px_30px_rgba(245,158,11,0.3)] flex items-center gap-2 transition-all group"
               >
                 <span>Shop Now</span>
                 <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
@@ -71,7 +71,7 @@ export function HeroBanner() {
               </Link>
               <Link
                 href="/about"
-                className="px-7 py-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/20 hover:border-gold-accent/50 font-caps uppercase tracking-wider text-[13px] flex items-center gap-2 backdrop-blur-md transition-all"
+                className="px-5 py-3 sm:px-7 sm:py-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/20 hover:border-gold-accent/50 font-caps uppercase tracking-wider text-[13px] flex items-center gap-2 backdrop-blur-md transition-all"
               >
                 About Us
               </Link>
@@ -80,12 +80,12 @@ export function HeroBanner() {
         </div>
 
         {/* Stats row */}
-        <div className="mt-20 pt-10 border-t border-border-subtle grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-12 pt-8 sm:mt-20 sm:pt-10 border-t border-border-subtle grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {stats.map((item, i) => (
             <Reveal key={item.stat} delay={650 + i * 100} variant="up">
               <div className="flex flex-col border-l-2 border-gold-accent/50 pl-5">
                 <span
-                  className={`font-display font-bold text-[32px] sm:text-[38px] leading-tight ${
+                  className={`font-display font-bold text-[26px] sm:text-[32px] md:text-[38px] leading-tight ${
                     item.gold ? 'text-gold-light' : 'text-white'
                   }`}
                 >

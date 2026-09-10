@@ -14,9 +14,9 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#06080c] text-white pt-16 pb-10 border-t border-border-subtle">
+    <footer className="w-full bg-[#06080c] text-white pt-10 sm:pt-16 pb-8 sm:pb-10 border-t border-border-subtle">
       <div className="max-w-[1360px] mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/[0.08]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 pb-12 border-b border-white/[0.08]">
           {/* Brand */}
           <div className="space-y-5">
             <div className="flex items-center gap-3">
@@ -43,9 +43,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="p-2.5 rounded-xl bg-white/[0.05] hover:bg-blue-600/20 border border-white/10 hover:border-blue-500/40 text-white/60 hover:text-blue-400 transition-all"
+                className="p-3 rounded-xl bg-white/[0.05] hover:bg-blue-600/20 border border-white/10 hover:border-blue-500/40 text-white/60 hover:text-blue-400 transition-all"
               >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </a>
@@ -54,9 +54,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="p-2.5 rounded-xl bg-white/[0.05] hover:bg-pink-600/20 border border-white/10 hover:border-pink-500/40 text-white/60 hover:text-pink-400 transition-all"
+                className="p-3 rounded-xl bg-white/[0.05] hover:bg-pink-600/20 border border-white/10 hover:border-pink-500/40 text-white/60 hover:text-pink-400 transition-all"
               >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
                   <path
                     d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
@@ -113,7 +113,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] font-light text-slate-500">
+        <div className="pt-8 flex flex-col sm:flex-row text-center sm:text-left items-center justify-between gap-3 text-[12px] font-light text-slate-500">
           <p>&copy; {new Date().getFullYear()} Anand Sports. All Rights Reserved.</p>
           <p className="text-[11px] text-slate-600">Made with &#9829; for sport lovers</p>
         </div>

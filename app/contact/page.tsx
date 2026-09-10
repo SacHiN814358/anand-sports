@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -38,7 +38,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-surface">
       {/* Header Banner */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
+      <section className="relative py-14 sm:py-20 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(245,158,11,0.08),transparent)] pointer-events-none" />
 
         <div className="relative max-w-3xl mx-auto space-y-4">
@@ -47,7 +47,7 @@ export default function ContactPage() {
             East India Wholesale Desk &bull; Cuttack &amp; Bhubaneswar
           </div>
 
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl uppercase tracking-tight text-white">
+          <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-6xl uppercase tracking-tight text-white">
             Get In Touch
           </h1>
 
@@ -61,11 +61,11 @@ export default function ContactPage() {
       <section className="max-w-[1360px] mx-auto px-4 md:px-8 py-16">
         
         {/* Quick Phone Hotline Bar */}
-        <div className="mb-14 p-8 rounded-3xl bg-gradient-to-r from-white/[0.03] via-white/[0.05] to-white/[0.03] border border-gold-accent/30 space-y-6">
+        <div className="mb-10 sm:mb-14 p-5 sm:p-8 rounded-3xl bg-gradient-to-r from-white/[0.03] via-white/[0.05] to-white/[0.03] border border-gold-accent/30 space-y-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <span className="font-caps text-gold-light uppercase tracking-widest text-[11px]">Direct Hotlines</span>
-              <h2 className="font-display font-bold text-2xl uppercase text-white">Wholesale &amp; Orders Support</h2>
+              <h2 className="font-display font-bold text-xl sm:text-2xl uppercase text-white">Wholesale &amp; Orders Support</h2>
             </div>
             <span className="text-[12px] font-mono text-emerald-400 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -100,10 +100,10 @@ export default function ContactPage() {
           
           {/* Left Column: Interactive Contact Form (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white/[0.02] border border-border-subtle space-y-6 shadow-xl">
+            <div className="p-5 sm:p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-border-subtle space-y-6 shadow-xl">
               <div className="space-y-2">
                 <span className="font-caps text-gold-light uppercase tracking-widest text-[11px]">Quick Inquiry</span>
-                <h2 className="font-display font-bold text-2xl uppercase text-white">Send Us A Message</h2>
+                <h2 className="font-display font-bold text-xl sm:text-2xl uppercase text-white">Send Us A Message</h2>
                 <p className="text-[13px] text-on-surface-variant font-light">
                   Submit your wholesale inquiry or trade requirements below and our team will get back to you promptly.
                 </p>
@@ -220,7 +220,7 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Store Address Card */}
-            <div className="p-7 rounded-3xl bg-white/[0.02] border border-border-subtle space-y-4">
+            <div className="p-5 sm:p-7 rounded-3xl bg-white/[0.02] border border-border-subtle space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-xl bg-gold-accent/15 border border-gold-accent/30 flex items-center justify-center text-gold-light">
                   <span className="material-symbols-outlined text-[24px]">location_on</span>
@@ -251,14 +251,14 @@ export default function ContactPage() {
             </div>
 
             {/* Email Card */}
-            <div className="p-6 rounded-3xl bg-white/[0.02] border border-border-subtle flex items-center justify-between gap-4">
+            <div className="p-4 sm:p-6 rounded-3xl bg-white/[0.02] border border-border-subtle flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-gold-accent/15 border border-gold-accent/30 flex items-center justify-center text-gold-light">
                   <span className="material-symbols-outlined text-[20px]">mail</span>
                 </div>
-                <div>
+                <div className="overflow-hidden">
                   <span className="text-[10px] font-caps uppercase tracking-wider text-on-surface-variant block">Official Email</span>
-                  <a href="mailto:yogesh@anandsportswholesale.com" className="font-mono text-[13px] text-white hover:text-gold-light transition-colors">
+                  <a href="mailto:yogesh@anandsportswholesale.com" className="font-mono text-[12px] sm:text-[13px] break-all text-white hover:text-gold-light transition-colors">
                     yogesh@anandsportswholesale.com
                   </a>
                 </div>
@@ -266,7 +266,7 @@ export default function ContactPage() {
             </div>
 
             {/* Business Hours Card */}
-            <div className="p-7 rounded-3xl bg-white/[0.02] border border-border-subtle space-y-4">
+            <div className="p-5 sm:p-7 rounded-3xl bg-white/[0.02] border border-border-subtle space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-gold-accent/15 border border-gold-accent/30 flex items-center justify-center text-gold-light">
@@ -299,7 +299,7 @@ export default function ContactPage() {
         </div>
 
         {/* Sister Concerns Contact Footer Strip */}
-        <div className="mt-16 p-8 rounded-3xl bg-white/[0.02] border border-border-subtle grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+        <div className="mt-10 sm:mt-16 p-5 sm:p-8 rounded-3xl bg-white/[0.02] border border-border-subtle grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
           <div className="space-y-1">
             <span className="font-caps text-gold-light uppercase tracking-widest text-[11px]">Sister Concern Facilities</span>
             <h4 className="font-display font-bold text-lg uppercase text-white">Cuttack &amp; Ranchi Depots</h4>

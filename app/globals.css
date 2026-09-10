@@ -36,10 +36,13 @@
 
   * {
     @apply border-border-subtle;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
     @apply bg-surface text-on-surface selection:bg-gold-accent selection:text-black min-h-screen flex flex-col antialiased;
+    touch-action: manipulation;
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
 
@@ -58,6 +61,15 @@
 
   .section-padding {
     @apply px-4 sm:px-6 lg:px-8 xl:px-16;
+  }
+
+  .scrollbar-hide-x {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scrollbar-hide-x::-webkit-scrollbar {
+    display: none;
   }
 }
 

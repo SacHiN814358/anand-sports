@@ -12,14 +12,14 @@ export default function CartPage() {
   return (
     <div className="section-padding py-12 md:py-16">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-heading font-bold uppercase tracking-tight mb-12">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-heading font-bold uppercase tracking-tight mb-8 sm:mb-12">
           YOUR CART
         </h1>
 
         {items.length === 0 ? (
-          <div className="bg-card text-card-foreground border border-border rounded-xl shadow-sm p-12 text-center flex flex-col items-center justify-center max-w-2xl mx-auto">
-            <ShoppingCart className="w-16 h-16 text-foreground/20 mb-6" />
-            <h2 className="text-2xl font-bold mb-4">Your cart is empty</h2>
+          <div className="bg-card text-card-foreground border border-border rounded-xl shadow-sm p-8 sm:p-12 text-center flex flex-col items-center justify-center max-w-2xl mx-auto">
+            <ShoppingCart className="w-12 h-12 sm:w-16 sm:h-16 text-foreground/20 mb-6" />
+            <h2 className="text-xl sm:text-2xl font-bold mb-4">Your cart is empty</h2>
             <p className="text-muted-foreground mb-8">Looks like you haven't added anything to your cart yet.</p>
             <Button asChild variant="default" size="lg">
               <Link href="/products">Continue Shopping</Link>
@@ -98,7 +98,7 @@ export default function CartPage() {
             {/* Order Summary */}
             <div className="w-full lg:w-96 shrink-0">
               <div className="bg-card text-card-foreground border border-border rounded-xl shadow-sm p-6 sm:p-8 sticky top-24">
-                <h2 className="text-xl font-bold uppercase tracking-tight mb-6">Order Summary</h2>
+                <h2 className="text-lg sm:text-xl font-bold uppercase tracking-tight mb-6">Order Summary</h2>
                 
                 <div className="space-y-4 mb-6 text-sm sm:text-base">
                   <div className="flex justify-between">
@@ -114,7 +114,7 @@ export default function CartPage() {
                 <div className="border-t border-border pt-6 mb-8">
                   <div className="flex justify-between items-center">
                     <span className="text-lg font-bold uppercase">Total</span>
-                    <span className="text-2xl font-bold text-accent">{formatPrice(subtotal)}</span>
+                    <span className="text-xl sm:text-2xl font-bold text-accent">{formatPrice(subtotal)}</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-2 text-right">Taxes included where applicable</p>
                 </div>

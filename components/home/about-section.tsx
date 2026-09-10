@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
@@ -21,9 +21,9 @@ const sisterConcerns = [
 
 export function AboutSection() {
   return (
-    <section className="w-full bg-surface-container-low py-24 border-b border-border-subtle overflow-hidden" id="about">
+    <section className="w-full bg-surface-container-low py-14 sm:py-24 border-b border-border-subtle overflow-hidden" id="about">
       <div className="max-w-[1360px] mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           
           {/* Left Column: Story & Sister Concerns (7 cols) */}
           <div className="lg:col-span-7 flex flex-col space-y-8">
@@ -33,7 +33,7 @@ export function AboutSection() {
                   <span className="material-symbols-outlined text-[16px]">history_edu</span>
                   40+ Years of Legacy
                 </div>
-                <h2 className="font-display font-bold text-[32px] sm:text-[44px] uppercase tracking-tight text-white leading-tight mb-6">
+                <h2 className="font-display font-bold text-[26px] sm:text-[32px] md:text-[44px] uppercase tracking-tight text-white leading-tight mb-6">
                   About Us
                 </h2>
                 <p className="text-[15px] text-on-surface-variant leading-[1.85] font-light">
@@ -101,7 +101,7 @@ export function AboutSection() {
           </div>
 
           {/* Right Column: Original Founders Photo Card (5 cols) - object-top */}
-          <div className="lg:col-span-5 flex justify-center">
+          <div className="lg:col-span-5 flex justify-center order-first lg:order-last">
             <Reveal delay={200} variant="right" duration={800}>
               <div className="relative group rounded-2xl p-2 bg-gradient-to-b from-white/10 via-white/[0.03] to-transparent border border-white/15 hover:border-gold-accent/50 transition-all duration-500 shadow-2xl max-w-md w-full">
                 

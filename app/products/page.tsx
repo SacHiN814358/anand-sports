@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -175,7 +175,7 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-surface">
       {/* Header Banner */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
+      <section className="relative py-14 sm:py-20 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(245,158,11,0.08),transparent)] pointer-events-none" />
 
         <div className="relative max-w-3xl mx-auto space-y-4">
@@ -184,7 +184,7 @@ export default function ProductsPage() {
             Wholesale Catalog &bull; 15+ Top Brands
           </div>
 
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl uppercase tracking-tight text-white">
+          <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-6xl uppercase tracking-tight text-white">
             Sports Collection
           </h1>
 
@@ -197,15 +197,15 @@ export default function ProductsPage() {
       {/* Main Catalog Section */}
       <section className="max-w-[1360px] mx-auto px-4 md:px-8 py-12">
         {/* Category Filter Bar */}
-        <div className="mb-12">
-          <div className="flex items-center justify-center flex-wrap gap-2.5">
+        <div className="mb-8 sm:mb-12">
+          <div className="flex items-center lg:justify-center gap-2 sm:gap-2.5 overflow-x-auto scrollbar-hide pb-2 lg:flex-wrap lg:overflow-visible lg:pb-0">
             {categoryTabs.map((tab) => {
               const active = activeTab === tab.id;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-5 py-2.5 rounded-xl font-caps uppercase tracking-wider text-[12px] font-medium transition-all duration-200 ${
+                  className={`px-4 py-2 sm:px-5 sm:py-2.5 whitespace-nowrap shrink-0 rounded-xl font-caps uppercase tracking-wider text-[12px] font-medium transition-all duration-200 ${
                     active
                       ? 'bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold shadow-[0_4px_14px_rgba(245,158,11,0.3)]'
                       : 'bg-white/[0.03] hover:bg-white/[0.07] text-white/70 hover:text-white border border-border-medium'
@@ -219,7 +219,7 @@ export default function ProductsPage() {
         </div>
 
         {/* Results Counter */}
-        <div className="flex items-center justify-between mb-8 pb-3 border-b border-white/[0.07]">
+        <div className="flex items-center justify-between mb-6 sm:mb-8 pb-3 border-b border-white/[0.07]">
           <span className="text-[13px] font-mono text-slate-400">
             Showing {filteredProducts.length} Wholesale Categories
           </span>
@@ -254,7 +254,7 @@ export default function ProductsPage() {
               </div>
 
               {/* Card Details */}
-              <div className="p-6 flex flex-col space-y-4 flex-1 justify-between">
+              <div className="p-4 sm:p-6 flex flex-col space-y-4 flex-1 justify-between">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-caps uppercase tracking-widest text-gold-light px-2 py-0.5 rounded bg-gold-accent/10 border border-gold-accent/20">
@@ -262,7 +262,7 @@ export default function ProductsPage() {
                     </span>
                   </div>
 
-                  <h3 className="font-display font-bold text-[20px] uppercase text-white group-hover:text-gold-light transition-colors leading-snug">
+                  <h3 className="font-display font-bold text-[17px] sm:text-[20px] uppercase text-white group-hover:text-gold-light transition-colors leading-snug">
                     {item.title}
                   </h3>
 
@@ -310,8 +310,8 @@ export default function ProductsPage() {
         </div>
 
         {/* Bottom Trade Inquiry Callout */}
-        <div className="mt-20 p-10 rounded-2xl bg-gradient-to-r from-white/[0.03] via-white/[0.05] to-white/[0.03] border border-gold-accent/30 text-center space-y-4">
-          <h2 className="font-display font-bold text-2xl uppercase tracking-tight text-white">
+        <div className="mt-14 p-6 sm:mt-20 sm:p-10 rounded-2xl bg-gradient-to-r from-white/[0.03] via-white/[0.05] to-white/[0.03] border border-gold-accent/30 text-center space-y-4">
+          <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-tight text-white">
             Need Tiered Wholesale Price List or Bulk Quotation?
           </h2>
           <p className="text-on-surface-variant text-[14px] font-light max-w-xl mx-auto">
@@ -320,7 +320,7 @@ export default function ProductsPage() {
           <div className="pt-2 flex justify-center">
             <Link
               href="/contact"
-              className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold font-caps uppercase tracking-wider text-[13px] hover:from-amber-400 hover:to-gold-light transition-all shadow-[0_4px_16px_rgba(245,158,11,0.25)] flex items-center gap-2"
+              className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold font-caps uppercase tracking-wider text-[13px] hover:from-amber-400 hover:to-gold-light transition-all shadow-[0_4px_16px_rgba(245,158,11,0.25)] flex items-center gap-2"
             >
               <span className="material-symbols-outlined text-[16px]">call</span>
               Request B2B Trade Price Sheet
