@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Oswald, Syne } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/header';
@@ -25,6 +25,13 @@ const syne = Syne({
   weight: ['500', '600', '700', '800'],
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
   title: 'Anand Sports — Master Athletic Equipment & Sportswear Distributor Since 1984',
   description: "East India's master distributor for 15+ world-class athletic brands. Serving institutional buyers, tier-1 authorized dealers, and professional athletes.",
@@ -38,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link

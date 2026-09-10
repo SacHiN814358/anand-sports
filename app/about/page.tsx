@@ -73,15 +73,15 @@ export default function AboutPage() {
       {/* Hero Header */}
       <section className="relative py-16 sm:py-24 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(245,158,11,0.08),transparent)] pointer-events-none" />
-        <div className="relative max-w-3xl mx-auto space-y-4 px-2">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-accent/10 border border-gold-accent/25 text-gold-light font-caps uppercase tracking-widest text-[10px] sm:text-[11px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-accent animate-pulse" />
-            Est. 1984 &bull; Pioneer in Sports Distribution
+        <div className="relative max-w-3xl mx-auto space-y-3.5 px-2">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full bg-gold-accent/10 border border-gold-accent/25 text-gold-light font-caps uppercase tracking-widest text-[9.5px] sm:text-[11px] max-w-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold-accent animate-pulse shrink-0" />
+            <span className="truncate sm:whitespace-normal">Est. 1984 &bull; Pioneer in Sports Distribution</span>
           </div>
-          <h1 className="font-display font-extrabold text-3xl sm:text-6xl uppercase tracking-tight text-white leading-tight">
+          <h1 className="font-display font-extrabold text-2xl sm:text-4xl md:text-6xl uppercase tracking-tight text-white leading-tight break-words">
             About Anand Sports
           </h1>
-          <p className="text-on-surface-variant text-[14px] sm:text-[17px] font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-on-surface-variant text-[13px] sm:text-[17px] font-light leading-relaxed max-w-2xl mx-auto px-2">
             India&apos;s best sports equipment and sportswear distributor. Serving 1000+ retailers across the East Zone for over 40 years.
           </p>
         </div>
