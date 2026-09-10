@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Oswald, Syne } from 'next/font/google';
+import { Inter, Oswald, Syne, Bebas_Neue, Montserrat } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -24,6 +24,18 @@ const syne = Syne({
   subsets: ['latin'],
   variable: '--font-syne',
   weight: ['500', '600', '700', '800'],
+});
+
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  variable: '--font-bebas',
+  weight: ['400'],
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  weight: ['600', '700', '800', '900'],
 });
 
 export const viewport: Viewport = {
@@ -59,7 +71,9 @@ export default function RootLayout({
           "bg-surface text-on-surface selection:bg-gold-accent selection:text-black min-h-screen flex flex-col antialiased pb-16 lg:pb-0",
           geist.variable,
           oswald.variable,
-          syne.variable
+          syne.variable,
+          bebas.variable,
+          montserrat.variable
         )}
       >
         <CartProvider>

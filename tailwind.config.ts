@@ -76,6 +76,8 @@ const config: Config = {
       },
       fontFamily: {
         display: ['var(--font-syne)', 'Syne', 'sans-serif'],
+        bebas: ['var(--font-bebas)', 'Bebas Neue', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'Montserrat', 'sans-serif'],
         headline: ['var(--font-syne)', 'Syne', 'sans-serif'],
         body: ['var(--font-geist)', 'Geist', 'sans-serif'],
         caps: ['var(--font-oswald)', 'Oswald', 'sans-serif'],

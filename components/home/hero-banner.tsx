@@ -42,13 +42,12 @@ export function HeroBanner() {
             </div>
           </Reveal>
 
-          {/* Headline */}
+          {/* Headline — High-Impact Athletic Display Typography */}
           <Reveal delay={250} variant="up">
-            <h1 className="font-display font-extrabold text-[36px] sm:text-[52px] md:text-[64px] lg:text-[76px] leading-[1.03] tracking-tight text-white">
-              Stay fit{' '}
-              <span className="text-gold-accent text-glow-gold">live</span>
+            <h1 className="font-bebas tracking-wider text-[44px] sm:text-[68px] md:text-[84px] lg:text-[96px] leading-[0.95] uppercase text-white">
+              STAY FIT <span className="text-gold-accent text-glow-gold">LIVE</span>
               <br />
-              in style
+              IN STYLE
             </h1>
           </Reveal>
 
