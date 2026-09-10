@@ -98,6 +98,31 @@ export function HeroBanner() {
             </Reveal>
           ))}
         </div>
+
+        {/* Live Trust & Infrastructure Ribbon */}
+        <Reveal delay={950} variant="up">
+          <div className="mt-8 p-3.5 sm:p-4 rounded-2xl gold-glow-card flex flex-wrap items-center justify-around gap-3 text-[11px] sm:text-[12px] font-caps uppercase tracking-wider text-slate-300">
+            <span className="flex items-center gap-1.5 text-gold-light font-semibold">
+              <span className="material-symbols-outlined text-[16px]">military_tech</span>
+              40+ Yrs Master Legacy
+            </span>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <span className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-[16px] text-emerald-400">warehouse</span>
+              15,000 Sq.Ft Depots (Cuttack &amp; Ranchi)
+            </span>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <span className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-[16px] text-amber-400">local_shipping</span>
+              24h Express Carton Dispatch
+            </span>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <span className="flex items-center gap-1.5 text-emerald-400 font-semibold">
+              <span className="material-symbols-outlined text-[16px]">receipt_long</span>
+              100% Tax Invoice &amp; ITC Benefit
+            </span>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

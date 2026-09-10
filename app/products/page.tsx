@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { QuickQuoteDrawer } from '@/components/products/quick-quote-drawer';
 
 interface ProductCategoryItem {
   id: string;
@@ -166,6 +167,7 @@ const categoryTabs = [
 
 export default function ProductsPage() {
   const [activeTab, setActiveTab] = useState('all');
+  const [quoteItem, setQuoteItem] = useState<ProductCategoryItem | null>(null);
 
   const filteredProducts =
     activeTab === 'all'
@@ -296,13 +298,13 @@ export default function ProductsPage() {
                     ))}
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-gold-accent to-amber-500 hover:from-amber-400 hover:to-gold-light text-black font-bold font-caps uppercase text-[11px] tracking-wider transition-all shadow-[0_2px_10px_rgba(245,158,11,0.2)]"
+                  <button
+                    onClick={() => setQuoteItem(item)}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-gold-accent to-amber-500 hover:from-amber-400 hover:to-gold-light text-black font-bold font-caps uppercase text-[11px] tracking-wider transition-all shadow-[0_2px_10px_rgba(245,158,11,0.2)] active:scale-95 cursor-pointer"
                   >
                     <span>Inquire</span>
                     <span className="material-symbols-outlined text-[13px]">arrow_forward</span>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -320,7 +322,7 @@ export default function ProductsPage() {
           <div className="pt-2 flex justify-center">
             <Link
               href="/contact"
-              className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold font-caps uppercase tracking-wider text-[13px] hover:from-amber-400 hover:to-gold-light transition-all shadow-[0_4px_16px_rgba(245,158,11,0.25)] flex items-center gap-2"
+              className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold font-caps uppercase tracking-wider text-[13px] hover:from-amber-400 hover:to-gold-light transition-all shadow-[0_4px_16px_rgba(245,158,11,0.25)] flex items-center gap-2 active:scale-95"
             >
               <span className="material-symbols-outlined text-[16px]">call</span>
               Request B2B Trade Price Sheet
@@ -328,6 +330,17 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Quote Drawer Modal */}
+      {quoteItem && (
+        <QuickQuoteDrawer
+          isOpen={!!quoteItem}
+          onClose={() => setQuoteItem(null)}
+          productName={quoteItem.title}
+          categoryLabel={quoteItem.categoryLabel}
+          brandName={quoteItem.brands[0] || 'Anand Sports'}
+        />
+      )}
     </div>
   );
 }

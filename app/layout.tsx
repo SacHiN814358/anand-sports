@@ -3,6 +3,7 @@ import { Inter, Oswald, Syne } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { MobileBottomNav } from '@/components/layout/mobile-bottom-nav';
 import { WhatsAppWidget } from '@/components/ui/whatsapp-widget';
 import { CartProvider } from '@/context/cart-context';
 import { cn } from '@/lib/utils';
@@ -55,7 +56,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "bg-surface text-on-surface selection:bg-gold-accent selection:text-black min-h-screen flex flex-col antialiased",
+          "bg-surface text-on-surface selection:bg-gold-accent selection:text-black min-h-screen flex flex-col antialiased pb-16 lg:pb-0",
           geist.variable,
           oswald.variable,
           syne.variable
@@ -66,6 +67,7 @@ export default function RootLayout({
           <main className="flex-1 w-full">{children}</main>
           <Footer />
           <WhatsAppWidget />
+          <MobileBottomNav />
         </CartProvider>
       </body>
     </html>

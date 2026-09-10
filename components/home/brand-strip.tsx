@@ -35,28 +35,34 @@ export function BrandStrip() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
-          {partners.map((b, i) => (
-            <Reveal key={b.name} delay={i * 80} variant="scale">
-              <div className="group relative p-3 sm:p-5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-border-subtle hover:border-gold-accent/40 flex flex-col items-center justify-center text-center gap-1.5 transition-all duration-300 cursor-default">
+        <div className="relative overflow-hidden w-full border-y border-white/5 py-4 bg-black/40 backdrop-blur-md">
+          {/* Subtle Side Fade Gradients */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#090c10] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#090c10] to-transparent z-10 pointer-events-none" />
+
+          {/* Marquee Wrapper (Duplicated for Seamless Infinite Loop) */}
+          <div className="animate-marquee flex items-center gap-4">
+            {[...partners, ...partners, ...partners].map((b, i) => (
+              <div
+                key={`${b.name}-${i}`}
+                className="group shrink-0 px-6 py-3 rounded-xl bg-white/[0.03] hover:bg-gold-accent/15 border border-white/10 hover:border-gold-accent/40 flex items-center gap-3 transition-all duration-300 active:scale-95 cursor-default"
+              >
                 {b.highlight && (
-                  <span className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-gold-accent flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[11px] text-black">star</span>
-                  </span>
+                  <span className="w-2 h-2 rounded-full bg-gold-accent animate-pulse shrink-0" />
                 )}
                 <span
-                  className={`font-display font-bold text-[13px] sm:text-[16px] uppercase tracking-widest group-hover:text-gold-light transition-colors ${
-                    b.highlight ? 'text-gold-light' : 'text-white'
+                  className={`font-display font-bold text-[15px] sm:text-[17px] uppercase tracking-widest group-hover:text-gold-light transition-colors whitespace-nowrap ${
+                    b.highlight ? 'text-gold-light' : 'text-white/90'
                   }`}
                 >
                   {b.name}
                 </span>
-                <span className="text-[9px] font-caps uppercase tracking-wider text-on-surface-variant leading-tight">
+                <span className="text-[10px] font-caps uppercase tracking-wider text-on-surface-variant/80 border-l border-white/10 pl-3">
                   {b.note}
                 </span>
               </div>
-            </Reveal>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

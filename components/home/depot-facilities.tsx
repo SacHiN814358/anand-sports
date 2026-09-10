@@ -45,11 +45,11 @@ export function DepotFacilities() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="flex md:grid overflow-x-auto md:overflow-visible scrollbar-hide snap-x snap-mandatory grid-cols-1 md:grid-cols-3 gap-6 pb-4 md:pb-0">
           {depots.map((d, i) => (
             <div
               key={i}
-              className="p-8 rounded-2xl bg-white/[0.02] border border-border-subtle hover:border-gold-accent/40 transition-all flex flex-col justify-between space-y-6 group"
+              className="snap-center shrink-0 w-[85vw] sm:w-[350px] md:w-auto p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-border-subtle hover:border-gold-accent/40 transition-all flex flex-col justify-between space-y-6 group active:scale-[0.99]"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">

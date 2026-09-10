@@ -102,3 +102,36 @@
   display: none;
 }
 
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Metallic Ambient Gold Card Styles */
+.gold-glow-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(245, 158, 11, 0.03) 50%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(245, 158, 11, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gold-glow-card:hover {
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 35px rgba(245, 158, 11, 0.25);
+}
+

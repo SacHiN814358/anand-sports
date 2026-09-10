@@ -103,7 +103,7 @@ export function AboutSection() {
           {/* Right Column: Original Founders Photo Card (5 cols) - object-top */}
           <div className="lg:col-span-5 flex justify-center order-first lg:order-last">
             <Reveal delay={200} variant="right" duration={800}>
-              <div className="relative group rounded-2xl p-2 bg-gradient-to-b from-white/10 via-white/[0.03] to-transparent border border-white/15 hover:border-gold-accent/50 transition-all duration-500 shadow-2xl max-w-md w-full">
+              <div className="relative group rounded-2xl p-2.5 gold-glow-card max-w-md w-full">
                 
                 {/* Photo Container */}
                 <div className="relative rounded-xl overflow-hidden aspect-[4/5] bg-black">

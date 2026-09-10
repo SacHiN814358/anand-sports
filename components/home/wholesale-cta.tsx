@@ -29,48 +29,63 @@ export function WholesaleCTA() {
               Are you a sports retailer, academy director, tournament convener, or institutional buyer? Submit your requirements for tiered wholesale price sheets, bulk dispatch timelines, and official dealer authorization certificates.
             </p>
 
-            <div className="space-y-4 pt-2">
-              <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-gold-light mt-0.5 text-[20px]">
-                  check_circle
-                </span>
-                <div>
-                  <h4 className="text-white font-caps uppercase text-[14px] tracking-wide font-medium">
-                    Tiered Carton Discounts
-                  </h4>
-                  <p className="text-[12px] text-on-surface-variant">
-                    Volume pricing brackets for 10+, 50+, and 100+ carton allocations.
-                  </p>
-                </div>
-              </div>
+            <div className="space-y-3 pt-2">
+              <details className="group p-3.5 rounded-xl bg-white/[0.03] border border-white/10 open:bg-white/[0.06] transition-all">
+                <summary className="flex items-center justify-between cursor-pointer list-none">
+                  <div className="flex items-center gap-3">
+                    <span className="material-symbols-outlined text-gold-light text-[20px]">
+                      check_circle
+                    </span>
+                    <h4 className="text-white font-caps uppercase text-[13.5px] sm:text-[14px] tracking-wide font-medium">
+                      Tiered Carton Discounts
+                    </h4>
+                  </div>
+                  <span className="material-symbols-outlined text-white/50 text-[18px] group-open:rotate-180 transition-transform">
+                    expand_more
+                  </span>
+                </summary>
+                <p className="text-[12px] text-on-surface-variant pt-2.5 pl-8 leading-relaxed border-t border-white/5 mt-2.5">
+                  Volume pricing brackets for 10+, 50+, and 100+ carton allocations with factory warranty pass-through.
+                </p>
+              </details>
 
-              <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-gold-light mt-0.5 text-[20px]">
-                  check_circle
-                </span>
-                <div>
-                  <h4 className="text-white font-caps uppercase text-[14px] tracking-wide font-medium">
-                    State-wide Express Depot Dispatch
-                  </h4>
-                  <p className="text-[12px] text-on-surface-variant">
-                    Same-day dispatch across Odisha, Jharkhand, West Bengal, and Chhattisgarh.
-                  </p>
-                </div>
-              </div>
+              <details className="group p-3.5 rounded-xl bg-white/[0.03] border border-white/10 open:bg-white/[0.06] transition-all">
+                <summary className="flex items-center justify-between cursor-pointer list-none">
+                  <div className="flex items-center gap-3">
+                    <span className="material-symbols-outlined text-gold-light text-[20px]">
+                      check_circle
+                    </span>
+                    <h4 className="text-white font-caps uppercase text-[13.5px] sm:text-[14px] tracking-wide font-medium">
+                      State-wide Express Depot Dispatch
+                    </h4>
+                  </div>
+                  <span className="material-symbols-outlined text-white/50 text-[18px] group-open:rotate-180 transition-transform">
+                    expand_more
+                  </span>
+                </summary>
+                <p className="text-[12px] text-on-surface-variant pt-2.5 pl-8 leading-relaxed border-t border-white/5 mt-2.5">
+                  Same-day dispatch across Odisha, Jharkhand, West Bengal, and Chhattisgarh via our central godowns.
+                </p>
+              </details>
 
-              <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-gold-light mt-0.5 text-[20px]">
-                  check_circle
-                </span>
-                <div>
-                  <h4 className="text-white font-caps uppercase text-[14px] tracking-wide font-medium">
-                    GST & Invoice Compliance
-                  </h4>
-                  <p className="text-[12px] text-on-surface-variant">
-                    100% Tax invoice with ITC benefit and brand warranty pass-through.
-                  </p>
-                </div>
-              </div>
+              <details className="group p-3.5 rounded-xl bg-white/[0.03] border border-white/10 open:bg-white/[0.06] transition-all">
+                <summary className="flex items-center justify-between cursor-pointer list-none">
+                  <div className="flex items-center gap-3">
+                    <span className="material-symbols-outlined text-gold-light text-[20px]">
+                      check_circle
+                    </span>
+                    <h4 className="text-white font-caps uppercase text-[13.5px] sm:text-[14px] tracking-wide font-medium">
+                      GST & Invoice Compliance
+                    </h4>
+                  </div>
+                  <span className="material-symbols-outlined text-white/50 text-[18px] group-open:rotate-180 transition-transform">
+                    expand_more
+                  </span>
+                </summary>
+                <p className="text-[12px] text-on-surface-variant pt-2.5 pl-8 leading-relaxed border-t border-white/5 mt-2.5">
+                  100% Tax invoice with ITC benefit and brand warranty pass-through for registered trade partners.
+                </p>
+              </details>
             </div>
           </div>
 

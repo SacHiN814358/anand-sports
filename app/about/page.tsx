@@ -172,20 +172,20 @@ export default function AboutPage() {
         </div>
 
         {/* Directors Messages Section (Yogesh Agarwal & Suraj Agarwal) */}
-        <div className="mb-20 sm:mb-24 space-y-8 sm:space-y-12">
+        <div className="mb-16 sm:mb-24 space-y-6 sm:space-y-12">
           <div className="text-center max-w-xl mx-auto space-y-2">
             <span className="font-caps text-gold-light uppercase tracking-widest text-[11px] sm:text-[12px]">Leadership Vision</span>
-            <h2 className="font-display font-bold text-2xl sm:text-4xl uppercase tracking-tight text-white">
+            <h2 className="font-display font-bold text-xl sm:text-4xl uppercase tracking-tight text-white break-words">
               Director Statements
             </h2>
             <div className="w-16 h-0.5 bg-gold-accent mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
             
             {/* Director 1: Yogesh Agarwal - Mobile Responsive Stack */}
-            <div className="group rounded-3xl p-5 sm:p-8 bg-white/[0.02] border border-border-subtle hover:border-gold-accent/40 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-6 shadow-xl relative overflow-hidden">
-              <div className="w-full sm:w-44 h-60 sm:h-60 shrink-0 rounded-2xl overflow-hidden bg-black/60 border border-white/15 relative">
+            <div className="group rounded-2xl sm:rounded-3xl p-4 sm:p-8 bg-white/[0.02] border border-border-subtle hover:border-gold-accent/40 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 shadow-xl relative overflow-hidden min-w-0">
+              <div className="w-full sm:w-44 h-52 sm:h-60 shrink-0 rounded-2xl overflow-hidden bg-black/60 border border-white/15 relative">
                 <img
                   alt="Yogesh Agarwal Director"
                   src="https://anandsports.co.in/wp-content/uploads/2023/09/Untitled-design-71.png"
@@ -193,13 +193,13 @@ export default function AboutPage() {
                 />
               </div>
 
-              <div className="space-y-3 flex-1 text-left">
+              <div className="space-y-3 flex-1 text-left min-w-0 w-full">
                 <span className="text-gold-accent text-3xl sm:text-4xl font-display leading-none block">&ldquo;</span>
-                <p className="text-[13.5px] sm:text-[14.5px] text-white font-medium italic leading-relaxed">
+                <p className="text-[13px] sm:text-[14.5px] text-white font-medium italic leading-relaxed break-words">
                   &ldquo;TODAY&apos;S INDIA NEEDS SOMETHING WHICH IS TRULY OUT OF BOUNDARIES, &quot;SPORTS&quot; IS THAT OPPORTUNITY, LET&apos;S TAKE IT TO EVERYONE AND EVERYWHERE&rdquo;
                 </p>
                 <div className="pt-3 border-t border-white/10">
-                  <h4 className="font-display font-bold text-[16px] sm:text-[18px] uppercase text-white tracking-wide">
+                  <h4 className="font-display font-bold text-[15px] sm:text-[18px] uppercase text-white tracking-wide break-words">
                     YOGESH AGARWAL
                   </h4>
                   <span className="text-[11px] sm:text-[12px] font-caps uppercase tracking-wider text-gold-light">
@@ -210,8 +210,8 @@ export default function AboutPage() {
             </div>
 
             {/* Director 2: Suraj Agarwal - Mobile Responsive Stack */}
-            <div className="group rounded-3xl p-5 sm:p-8 bg-white/[0.02] border border-border-subtle hover:border-gold-accent/40 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-6 shadow-xl relative overflow-hidden">
-              <div className="w-full sm:w-44 h-60 sm:h-60 shrink-0 rounded-2xl overflow-hidden bg-black/60 border border-white/15 relative">
+            <div className="group rounded-2xl sm:rounded-3xl p-4 sm:p-8 bg-white/[0.02] border border-border-subtle hover:border-gold-accent/40 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 shadow-xl relative overflow-hidden min-w-0">
+              <div className="w-full sm:w-44 h-52 sm:h-60 shrink-0 rounded-2xl overflow-hidden bg-black/60 border border-white/15 relative">
                 <img
                   alt="Suraj Agarwal Director"
                   src="https://anandsports.co.in/wp-content/uploads/2023/10/Untitled-design-99.png"
@@ -219,13 +219,13 @@ export default function AboutPage() {
                 />
               </div>
 
-              <div className="space-y-3 flex-1 text-left">
+              <div className="space-y-3 flex-1 text-left min-w-0 w-full">
                 <span className="text-gold-accent text-3xl sm:text-4xl font-display leading-none block">&ldquo;</span>
-                <p className="text-[13.5px] sm:text-[14.5px] text-white font-medium italic leading-relaxed">
+                <p className="text-[13px] sm:text-[14.5px] text-white font-medium italic leading-relaxed break-words">
                   &ldquo;Welcome to the heart of sports passion! Dive into the excitement, embrace the challenges, and celebrate victories together. Let&apos;s make sporting history!&rdquo;
                 </p>
                 <div className="pt-3 border-t border-white/10">
-                  <h4 className="font-display font-bold text-[16px] sm:text-[18px] uppercase text-white tracking-wide">
+                  <h4 className="font-display font-bold text-[15px] sm:text-[18px] uppercase text-white tracking-wide break-words">
                     SURAJ AGARWAL
                   </h4>
                   <span className="text-[11px] sm:text-[12px] font-caps uppercase tracking-wider text-gold-light">

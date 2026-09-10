@@ -22,7 +22,7 @@ export function WhatsAppWidget() {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end pointer-events-auto">
+    <div className="fixed bottom-20 lg:bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end pointer-events-auto">
       {/* Quick Popup Drawer */}
       {isOpen && (
         <div className="mb-3 sm:mb-4 w-[calc(100vw-2rem)] sm:w-96 bg-[#090c10]/98 backdrop-blur-2xl border border-white/20 rounded-3xl p-4 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.8)] space-y-4 animate-scale-in">

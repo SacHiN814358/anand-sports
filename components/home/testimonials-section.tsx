@@ -46,10 +46,10 @@ export function TestimonialsSection() {
         </Reveal>
 
         {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-5xl mx-auto">
+        <div className="flex md:grid overflow-x-auto md:overflow-visible scrollbar-hide snap-x snap-mandatory grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-5xl mx-auto pb-4 md:pb-0">
           {reviews.map((rev, index) => (
-            <Reveal key={rev.id} delay={150 * (index + 1)} variant="up">
-              <div className="h-full p-5 sm:p-8 md:p-10 rounded-2xl bg-white/[0.03] border border-border-subtle hover:border-gold-accent/40 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+            <Reveal key={rev.id} delay={150 * (index + 1)} variant="up" className="snap-center shrink-0 w-[88vw] sm:w-[450px] md:w-auto">
+              <div className="h-full p-5 sm:p-8 md:p-10 rounded-2xl bg-white/[0.03] border border-border-subtle hover:border-gold-accent/40 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group active:scale-[0.99]">
                 {/* Decorative Quote Icon Watermark */}
                 <span className="absolute -top-3 -right-2 font-display text-[110px] leading-none text-white/[0.03] group-hover:text-gold-accent/10 transition-colors select-none pointer-events-none">
                   &ldquo;
