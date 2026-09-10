@@ -60,23 +60,23 @@ export function AboutSection() {
                   {sisterConcerns.map((item) => (
                     <div
                       key={item.name}
-                      className="p-4 rounded-xl bg-white/[0.03] border border-border-subtle hover:border-gold-accent/40 transition-all flex items-start gap-3"
+                      className="p-3.5 sm:p-4 rounded-xl bg-white/[0.03] border border-border-subtle hover:border-gold-accent/40 transition-all flex items-start gap-3 min-w-0 overflow-hidden"
                     >
                       <div className="w-10 h-10 rounded-lg bg-gold-accent/15 border border-gold-accent/30 flex items-center justify-center shrink-0">
                         <span className="material-symbols-outlined text-[20px] text-gold-light">
                           {item.icon}
                         </span>
                       </div>
-                      <div className="space-y-1">
-                        <div className="flex items-center justify-between">
-                          <h4 className="font-display font-bold text-[15px] uppercase text-white">
+                      <div className="space-y-1 min-w-0 flex-1 overflow-hidden">
+                        <div className="flex items-center justify-between gap-1">
+                          <h4 className="font-display font-bold text-[14px] sm:text-[15px] uppercase text-white truncate">
                             {item.name}
                           </h4>
                         </div>
-                        <p className="text-[11.5px] text-on-surface-variant font-light">
+                        <p className="text-[11px] sm:text-[11.5px] text-on-surface-variant font-light leading-snug break-words">
                           {item.location}
                         </p>
-                        <span className="inline-block text-[10px] font-mono text-gold-light px-2 py-0.5 rounded bg-black/40 border border-white/10">
+                        <span className="inline-block text-[9.5px] sm:text-[10px] font-mono text-gold-light px-2 py-0.5 rounded bg-black/40 border border-white/10 shrink-0 mt-0.5">
                           {item.year}
                         </span>
                       </div>

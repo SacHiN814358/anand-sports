@@ -239,35 +239,35 @@ export default function AboutPage() {
         </div>
 
         {/* Our Sister Concerns */}
-        <div className="mb-20 sm:mb-24 p-5 sm:p-10 rounded-3xl bg-white/[0.02] border border-border-subtle space-y-6 sm:space-y-8">
+        <div className="mb-16 sm:mb-24 p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] border border-border-subtle space-y-6 sm:space-y-8 overflow-hidden">
           <div className="text-center max-w-xl mx-auto space-y-2">
             <span className="font-caps text-gold-light uppercase tracking-widest text-[11px] sm:text-[12px]">Expanding Reach</span>
-            <h2 className="font-display font-bold text-2xl sm:text-3xl uppercase tracking-tight text-white">Our Sister Concerns</h2>
+            <h2 className="font-display font-bold text-xl sm:text-3xl uppercase tracking-tight text-white">Our Sister Concerns</h2>
             <div className="w-16 h-0.5 bg-gold-accent mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {sisterConcerns.map((item) => (
               <div
                 key={item.id}
-                className="p-5 sm:p-7 rounded-2xl bg-white/[0.03] border border-border-subtle hover:border-gold-accent/40 transition-all flex flex-col sm:flex-row items-start gap-4 sm:gap-5 group"
+                className="p-4 sm:p-6 rounded-2xl bg-white/[0.03] border border-border-subtle hover:border-gold-accent/40 transition-all flex flex-col sm:flex-row items-start gap-3.5 sm:gap-5 group min-w-0 overflow-hidden"
               >
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gold-accent/15 border border-gold-accent/30 flex items-center justify-center shrink-0 group-hover:bg-gold-accent/25 transition-colors">
                   <span className="material-symbols-outlined text-[24px] sm:text-[28px] text-gold-light">{item.icon}</span>
                 </div>
-                <div className="space-y-2 w-full">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                    <h3 className="font-display font-bold text-[18px] sm:text-[20px] uppercase text-white group-hover:text-gold-light transition-colors">
+                <div className="space-y-2 w-full min-w-0">
+                  <div className="flex flex-wrap sm:flex-nowrap items-start sm:items-center justify-between gap-1.5">
+                    <h3 className="font-display font-bold text-[16px] sm:text-[19px] uppercase text-white group-hover:text-gold-light transition-colors break-words">
                       {item.name}
                     </h3>
-                    <span className="text-[10px] font-mono text-gold-light px-2.5 py-0.5 rounded bg-black/50 border border-white/10 self-start sm:self-auto">
+                    <span className="text-[10px] font-mono text-gold-light px-2 py-0.5 rounded bg-black/50 border border-white/10 shrink-0">
                       {item.year}
                     </span>
                   </div>
-                  <p className="text-[12.5px] sm:text-[13px] text-on-surface-variant font-light leading-relaxed">
+                  <p className="text-[12px] sm:text-[13px] text-on-surface-variant font-light leading-relaxed break-words">
                     {item.location}
                   </p>
-                  <p className="text-[11.5px] sm:text-[12px] text-slate-400 font-light italic">
+                  <p className="text-[11px] sm:text-[12px] text-slate-400 font-light italic break-words">
                     {item.desc}
                   </p>
                 </div>
