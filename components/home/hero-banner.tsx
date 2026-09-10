@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Reveal from '@/components/ui/reveal';
+import { LaserScanner } from '@/components/ui/laser-scanner';
 
 export function HeroBanner() {
   const stats = [
@@ -20,12 +21,13 @@ export function HeroBanner() {
       {/* Background image + overlays */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img
-          alt="Anand Sports football rugby cricket action background"
-          className="w-full h-full object-cover object-center opacity-40 scale-105 filter brightness-75 contrast-110"
-          src="/images/hero-bg.webp"
+          alt="Anand Sports Cricket & Racket Sports HD Action Background"
+          className="w-full h-full object-cover object-center opacity-65 filter contrast-105 brightness-95 animate-hero-breathing"
+          src="/images/hero-bg.jpg"
         />
+        <LaserScanner />
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-surface/40" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(245,158,11,0.1),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(245,158,11,0.12),transparent)]" />
       </div>
 
       <div className="relative max-w-[1360px] mx-auto px-4 md:px-8 w-full">
