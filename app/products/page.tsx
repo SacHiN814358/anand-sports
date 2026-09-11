@@ -340,6 +340,7 @@ export default function ProductsPage() {
           productName={quoteItem.title}
           categoryLabel={quoteItem.categoryLabel}
           brandName={quoteItem.brands[0] || 'Anand Sports'}
+          productImage={quoteItem.image}
         />
       )}
     </div>
