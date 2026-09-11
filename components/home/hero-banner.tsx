@@ -18,13 +18,23 @@ export function HeroBanner() {
       id="hero"
       className="relative w-full overflow-hidden bg-surface pt-16 pb-14 sm:pt-24 sm:pb-20 border-b border-border-subtle min-h-[80vh] sm:min-h-[92vh] flex items-center"
     >
-      {/* Background image + overlays */}
+      {/* Background video + overlays */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img
-          alt="Anand Sports Cricket & Racket Sports HD Action Background"
-          className="w-full h-full object-cover object-center opacity-65 filter contrast-105 brightness-95 animate-hero-breathing"
-          src="/images/hero-bg.jpg"
-        />
+        <video
+          ref={(el) => {
+            if (el) el.muted = true;
+          }}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/images/hero-bg.jpg"
+          className="w-full h-full object-cover object-center opacity-65 filter contrast-105 brightness-95"
+          aria-hidden="true"
+        >
+          <source src="/videos/hero-sports.mp4" type="video/mp4" />
+        </video>
         <LaserScanner />
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-surface/40" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(245,158,11,0.12),transparent)]" />
