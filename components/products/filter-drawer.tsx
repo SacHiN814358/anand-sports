@@ -36,7 +36,7 @@ export function FilterDrawer({ categories, brands, currentFilters, onFilterChang
       <SheetContent side="left" className="w-[300px] sm:w-[350px] bg-background border-r border-border p-0 overflow-y-auto">
         <SheetHeader className="p-6 pb-2 text-left">
           <SheetTitle className="text-foreground flex items-center gap-2">
-            <SlidersHorizontal className="h-5 w-5 text-brand-accent" />
+            <SlidersHorizontal className="h-5 w-5 text-amber-600" />
             Filters
           </SheetTitle>
         </SheetHeader>
@@ -54,7 +54,7 @@ export function FilterDrawer({ categories, brands, currentFilters, onFilterChang
         
         <div className="sticky bottom-0 p-6 bg-background/80 backdrop-blur-md border-t border-border">
           <Button 
-            className="w-full bg-brand-accent hover:bg-brand-accent/90 text-foreground"
+            className="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold"
             onClick={() => setOpen(false)}
           >
             Apply & Close

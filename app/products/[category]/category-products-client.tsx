@@ -93,10 +93,10 @@ export function CategoryProductsClient({ initialProducts, totalCount: initialTot
           ) : products.length > 0 ? (
             <ProductGrid>{products.map((p) => <ProductCard key={p.id} product={p} />)}</ProductGrid>
           ) : (
-            <div className="bg-card text-card-foreground border border-border rounded-xl shadow-sm p-12 text-center flex flex-col items-center justify-center">
+            <div className="bg-white text-slate-900 border border-slate-200 rounded-2xl shadow-sm p-12 text-center flex flex-col items-center justify-center">
               <h3 className="text-xl font-bold mb-2">No products found</h3>
-              <p className="text-muted-foreground mb-6 max-w-md mx-auto">We couldn't find any products matching your current filters.</p>
-              <Button onClick={clearFilters} variant="default">Clear Filters</Button>
+              <p className="text-slate-500 mb-6 max-w-md mx-auto">We couldn't find any products matching your current filters.</p>
+              <Button onClick={clearFilters} variant="default" className="bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold shadow-md">Clear Filters</Button>
             </div>
           )}
         </div>

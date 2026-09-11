@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Reveal from '@/components/ui/reveal';
-import { LaserScanner } from '@/components/ui/laser-scanner';
 
 export function HeroBanner() {
   const stats = [
@@ -16,9 +15,9 @@ export function HeroBanner() {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden bg-surface pt-16 pb-14 sm:pt-24 sm:pb-20 border-b border-border-subtle min-h-[80vh] sm:min-h-[92vh] flex items-center"
+      className="relative w-full overflow-hidden bg-slate-950 pt-16 pb-14 sm:pt-24 sm:pb-20 border-b border-slate-800 min-h-[80vh] sm:min-h-[88vh] flex items-center"
     >
-      {/* Background video + overlays */}
+      {/* Background video + clean cinematic athletic overlay */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <video
           ref={(el) => {
@@ -30,32 +29,30 @@ export function HeroBanner() {
           playsInline
           preload="auto"
           poster="/images/hero-bg.jpg"
-          className="w-full h-full object-cover object-center opacity-65 filter contrast-105 brightness-95"
+          className="w-full h-full object-cover object-center opacity-60 filter contrast-105 brightness-90"
           aria-hidden="true"
         >
           <source src="/videos/hero-sports.mp4" type="video/mp4" />
         </video>
-        <LaserScanner />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-surface/40" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(245,158,11,0.12),transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/35" />
       </div>
 
       <div className="relative max-w-[1360px] mx-auto px-4 md:px-8 w-full">
         <div className="max-w-3xl flex flex-col items-start space-y-7">
           {/* Eyebrow pill */}
           <Reveal delay={100} variant="down">
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/60 border border-white/15 backdrop-blur-md">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold-accent animate-pulse" />
-              <span className="font-caps tracking-[0.2em] uppercase text-white/80 text-[11px] font-medium">
-                Est. 1984 &bull; India&apos;s Trusted Distributor
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-amber-400" />
+              <span className="font-caps tracking-[0.18em] uppercase text-white/90 text-[11px] font-medium">
+                Est. 1984 &bull; India&apos;s Trusted Sports Distributor
               </span>
             </div>
           </Reveal>
 
           {/* Headline — High-Impact Athletic Display Typography */}
           <Reveal delay={250} variant="up">
-            <h1 className="font-bebas tracking-wider text-[44px] sm:text-[68px] md:text-[84px] lg:text-[96px] leading-[0.95] uppercase text-white">
-              STAY FIT <span className="text-gold-accent text-glow-gold">LIVE</span>
+            <h1 className="font-bebas tracking-wider text-[48px] sm:text-[72px] md:text-[88px] lg:text-[100px] leading-[0.95] uppercase text-white drop-shadow-md">
+              STAY FIT <span className="text-amber-400">LIVE</span>
               <br />
               IN STYLE
             </h1>
@@ -91,18 +88,18 @@ export function HeroBanner() {
         </div>
 
         {/* Stats row */}
-        <div className="mt-12 pt-8 sm:mt-20 sm:pt-10 border-t border-border-subtle grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <div className="mt-12 pt-8 sm:mt-20 sm:pt-10 border-t border-white/15 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {stats.map((item, i) => (
             <Reveal key={item.stat} delay={650 + i * 100} variant="up">
-              <div className="flex flex-col border-l-2 border-gold-accent/50 pl-5">
+              <div className="flex flex-col border-l-2 border-amber-400/70 pl-5">
                 <span
                   className={`font-display font-bold text-[26px] sm:text-[32px] md:text-[38px] leading-tight ${
-                    item.gold ? 'text-gold-light' : 'text-white'
+                    item.gold ? 'text-amber-400' : 'text-white'
                   }`}
                 >
                   {item.stat}
                 </span>
-                <span className="text-[11px] font-caps uppercase tracking-widest text-on-surface-variant mt-1">
+                <span className="text-[11px] font-caps uppercase tracking-widest text-slate-300 mt-1">
                   {item.label}
                 </span>
               </div>
@@ -112,14 +109,14 @@ export function HeroBanner() {
 
         {/* Live Trust & Infrastructure Ribbon */}
         <Reveal delay={950} variant="up">
-          <div className="mt-8 p-3.5 sm:p-4 rounded-2xl gold-glow-card flex flex-wrap items-center justify-around gap-3 text-[11px] sm:text-[12px] font-caps uppercase tracking-wider text-slate-300">
-            <span className="flex items-center gap-1.5 text-gold-light font-semibold">
+          <div className="mt-8 p-3.5 sm:p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 shadow-lg flex flex-wrap items-center justify-around gap-3 text-[11px] sm:text-[12px] font-caps uppercase tracking-wider text-white/90">
+            <span className="flex items-center gap-1.5 text-amber-400 font-semibold">
               <span className="material-symbols-outlined text-[16px]">military_tech</span>
               40+ Yrs Master Legacy
             </span>
             <span className="hidden sm:inline text-white/20">•</span>
             <span className="flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-[16px] text-emerald-400">warehouse</span>
+              <span className="material-symbols-outlined text-[16px] text-amber-400">warehouse</span>
               15,000 Sq.Ft Depots (Cuttack &amp; Ranchi)
             </span>
             <span className="hidden sm:inline text-white/20">•</span>
@@ -128,7 +125,7 @@ export function HeroBanner() {
               24h Express Carton Dispatch
             </span>
             <span className="hidden sm:inline text-white/20">•</span>
-            <span className="flex items-center gap-1.5 text-emerald-400 font-semibold">
+            <span className="flex items-center gap-1.5 text-amber-400 font-semibold">
               <span className="material-symbols-outlined text-[16px]">receipt_long</span>
               100% Tax Invoice &amp; ITC Benefit
             </span>

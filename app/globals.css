@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 220 28% 5%;
-    --foreground: 220 40% 95%;
-    --card: 220 28% 7%;
-    --card-foreground: 220 40% 95%;
-    --popover: 220 28% 7%;
-    --popover-foreground: 220 40% 95%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
     --primary: 38 92% 50%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 220 20% 15%;
-    --secondary-foreground: 220 40% 95%;
-    --muted: 220 20% 15%;
-    --muted-foreground: 215 16% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 38 92% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 20% 15%;
-    --input: 220 20% 15%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
     --ring: 38 92% 50%;
     --radius: 0.5rem;
   }
@@ -29,8 +29,8 @@
   html, body {
     margin: 0;
     padding: 0;
-    background-color: #090c10;
-    color: #dfe2ee;
+    background-color: #FAF7F2;
+    color: #0f172a;
     font-family: var(--font-geist), 'Geist', sans-serif;
   }
 
@@ -40,7 +40,7 @@
   }
 
   body {
-    @apply bg-surface text-on-surface selection:bg-gold-accent selection:text-black min-h-screen flex flex-col antialiased;
+    @apply bg-[#FAF7F2] text-on-surface selection:bg-amber-500 selection:text-white min-h-screen flex flex-col antialiased;
     touch-action: manipulation;
     padding-bottom: env(safe-area-inset-bottom);
   }
@@ -48,15 +48,15 @@
 
 @layer components {
   .text-glow-gold {
-    text-shadow: 0 0 24px rgba(245, 158, 11, 0.25);
+    text-shadow: none;
   }
 
   .glass-card {
-    @apply bg-white/[0.02] border border-border-subtle rounded-xl backdrop-blur-md;
+    @apply bg-white border border-slate-200 rounded-2xl shadow-sm;
   }
 
   .glass-card-hover {
-    @apply glass-card transition-all duration-300 hover:bg-white/[0.05] hover:border-gold-accent/40;
+    @apply glass-card transition-all duration-300 hover:border-amber-400 hover:shadow-md;
   }
 
   .section-padding {
@@ -73,23 +73,23 @@
   }
 }
 
-/* Custom scrollbar matching Stitch design */
+/* Custom scrollbar matching clean light design */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #090c10;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #262a33;
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #39485a;
+  background: #94a3b8;
 }
 
 /* Hide scrollbar on horizontal carousels */
@@ -122,52 +122,33 @@
   animation-play-state: paused;
 }
 
-/* Metallic Ambient Gold Card Styles */
+/* Premium Athletic Card Styles */
 .gold-glow-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(245, 158, 11, 0.03) 50%, rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(245, 158, 11, 0.1);
+  background: #ffffff;
+  border: 1px solid #E8E1D3;
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
 }
 
 .gold-glow-card:hover {
-  border-color: rgba(245, 158, 11, 0.6);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 35px rgba(245, 158, 11, 0.25);
+  border-color: #d97706;
+  box-shadow: 0 8px 20px -2px rgba(0, 0, 0, 0.08);
 }
 
-/* Style 3: Cinematic Breathing Camera Zoom */
-@keyframes slowBreathing {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.07);
-  }
-}
-
-.animate-hero-breathing {
-  animation: slowBreathing 18s ease-in-out infinite;
-}
-
-/* Style 3: Sleek Horizontal Gold Laser Scan Line */
-@keyframes laserScan {
+/* Silky Smooth Page Transitions */
+@keyframes pageEnter {
   0% {
-    top: -5%;
     opacity: 0;
-  }
-  15% {
-    opacity: 0.85;
-  }
-  85% {
-    opacity: 0.85;
+    transform: translateY(6px);
   }
   100% {
-    top: 105%;
-    opacity: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.animate-laser-scan {
-  animation: laserScan 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+.animate-page-enter {
+  animation: pageEnter 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: opacity, transform;
 }
 

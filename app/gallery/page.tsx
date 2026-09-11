@@ -236,20 +236,18 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-surface">
       {/* Header Banner */}
-      <section className="relative py-14 sm:py-20 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(245,158,11,0.08),transparent)] pointer-events-none" />
-
-        <div className="relative max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-accent/10 border border-gold-accent/25 text-gold-light font-caps uppercase tracking-widest text-[11px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-accent animate-pulse" />
+      <section className="relative py-8 sm:py-12 px-4 text-center bg-[#F3EEE5] border-b border-[#E8E1D3] overflow-hidden">
+        <div className="relative max-w-2xl mx-auto space-y-2.5">
+          <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-caps uppercase tracking-widest text-[10.5px] font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
             Original Gallery &amp; Event Archive &bull; Est. 1984
           </div>
 
-          <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-6xl uppercase tracking-tight text-white">
+          <h1 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl uppercase tracking-tight text-slate-900">
             Photo Gallery &amp; Events
           </h1>
 
-          <p className="text-on-surface-variant text-[15px] sm:text-[17px] font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-[13px] sm:text-[14.5px] leading-relaxed max-w-xl mx-auto">
             Original event photos, dealer meetups, and store celebrations from Anand Sports.
           </p>
         </div>
@@ -267,14 +265,14 @@ export default function GalleryPage() {
                 onClick={() => setActiveAlbum(tab.id)}
                 className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-caps uppercase tracking-wider text-[12px] font-medium transition-all duration-200 flex items-center gap-2 whitespace-nowrap shrink-0 ${
                   active
-                    ? 'bg-gradient-to-r from-gold-accent to-amber-500 text-black shadow-[0_4px_16px_rgba(245,158,11,0.3)] font-bold'
-                    : 'bg-white/[0.03] hover:bg-white/[0.07] text-white/70 hover:text-white border border-border-medium'
+                    ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-md shadow-amber-500/20 font-bold'
+                    : 'bg-white hover:bg-[#F3EEE5] text-slate-700 hover:text-slate-900 border border-[#E8E1D3] shadow-sm'
                 }`}
               >
                 <span>{tab.label}</span>
                 <span
                   className={`text-[10px] font-mono px-1.5 py-0.5 rounded-md ${
-                    active ? 'bg-black/30 text-black font-bold' : 'bg-white/10 text-slate-300'
+                    active ? 'bg-black/20 text-white font-bold' : 'bg-slate-100 text-slate-600'
                   }`}
                 >
                   {tab.count}
@@ -290,29 +288,29 @@ export default function GalleryPage() {
             <div
               key={item.id}
               onClick={() => setLightboxIndex(idx)}
-              className="group relative rounded-2xl bg-white/[0.02] border border-border-subtle hover:border-gold-accent/50 overflow-hidden flex flex-col cursor-pointer transition-all duration-300 shadow-lg hover:shadow-[0_12px_32px_rgba(0,0,0,0.6)]"
+              className="group relative rounded-2xl bg-white border border-[#E8E1D3] hover:border-amber-400 overflow-hidden flex flex-col cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg"
             >
               {/* Aspect Ratio Box */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-black/60">
+              <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
                 <img
                   alt={item.title}
                   src={item.image}
-                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 opacity-90"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#090c10] via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70 group-hover:opacity-85 transition-opacity" />
 
                 {/* Top Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1.5 rounded-lg bg-black/85 backdrop-blur-md border border-white/20 text-gold-light font-caps uppercase text-[10px] tracking-wider font-medium">
+                  <span className="px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-md border border-white/20 text-amber-300 font-caps uppercase text-[10px] tracking-wider font-semibold">
                     {item.albumName}
                   </span>
                 </div>
 
                 {/* Hover Zoom Icon */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 rounded-full bg-gold-accent text-black flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">
                     <span className="material-symbols-outlined text-[24px]">zoom_in</span>
                   </div>
                 </div>
@@ -321,17 +319,17 @@ export default function GalleryPage() {
               {/* Title & Caption */}
               <div className="p-5 flex flex-col space-y-2 flex-1 justify-between">
                 <div className="space-y-1">
-                  <h3 className="font-display font-bold text-[15px] sm:text-[17px] text-white uppercase group-hover:text-gold-light transition-colors leading-snug">
+                  <h3 className="font-display font-bold text-[15px] sm:text-[17px] text-slate-900 uppercase group-hover:text-amber-600 transition-colors leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-[12.5px] text-on-surface-variant font-light leading-relaxed">
+                  <p className="text-[12.5px] text-slate-600 leading-relaxed">
                     {item.caption}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-white/[0.07] flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
                   <span className="flex items-center gap-1">
-                    <span className="material-symbols-outlined text-[13px] text-gold-light">location_on</span>
+                    <span className="material-symbols-outlined text-[13px] text-amber-600">location_on</span>
                     {item.location}
                   </span>
                   <span>{item.date}</span>
@@ -342,17 +340,17 @@ export default function GalleryPage() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-14 p-6 sm:mt-20 sm:p-10 rounded-2xl bg-gradient-to-r from-white/[0.03] via-white/[0.05] to-white/[0.03] border border-gold-accent/30 text-center space-y-4">
-          <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-tight text-white">
+        <div className="mt-14 p-6 sm:mt-20 sm:p-10 rounded-2xl bg-[#F3EEE5] border border-[#E8E1D3] text-center space-y-4 shadow-sm">
+          <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-tight text-slate-900">
             Have Questions About Wholesale Supplies or Official Events?
           </h2>
-          <p className="text-on-surface-variant text-[14px] font-light max-w-xl mx-auto">
+          <p className="text-slate-600 text-[14px] max-w-xl mx-auto">
             Get in touch with Anand Sports central desk for B2B price lists, authorization certificates, and dealer meets.
           </p>
           <div className="pt-2 flex justify-center">
             <Link
               href="/contact"
-              className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold font-caps uppercase tracking-wider text-[13px] hover:from-amber-400 hover:to-gold-light transition-all shadow-[0_4px_16px_rgba(245,158,11,0.25)] flex items-center gap-2"
+              className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white font-bold font-caps uppercase tracking-wider text-[13px] hover:from-amber-600 hover:to-amber-700 transition-all shadow-md flex items-center gap-2 active:scale-95"
             >
               <span className="material-symbols-outlined text-[16px]">call</span>
               Contact Wholesale Desk
@@ -369,12 +367,12 @@ export default function GalleryPage() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl w-full bg-[#090c10] border border-white/20 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl flex flex-col cursor-default max-h-[95vh]"
+            className="relative max-w-5xl w-full bg-slate-900 border border-slate-700 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl flex flex-col cursor-default max-h-[95vh]"
           >
             {/* Close Button */}
             <button
               onClick={() => setLightboxIndex(null)}
-              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition-colors"
             >
               <span className="material-symbols-outlined text-[22px]">close</span>
             </button>
@@ -382,7 +380,7 @@ export default function GalleryPage() {
             {/* Previous Button */}
             <button
               onClick={handlePrev}
-              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition-colors"
             >
               <span className="material-symbols-outlined text-[24px]">chevron_left</span>
             </button>
@@ -390,7 +388,7 @@ export default function GalleryPage() {
             {/* Next Button */}
             <button
               onClick={handleNext}
-              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-gold-accent hover:text-black transition-colors"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/80 border border-white/20 text-white flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition-colors"
             >
               <span className="material-symbols-outlined text-[24px]">chevron_right</span>
             </button>
@@ -405,9 +403,9 @@ export default function GalleryPage() {
             </div>
 
             {/* Modal Footer */}
-            <div className="p-4 sm:p-6 bg-surface-container-low flex flex-col space-y-2 border-t border-white/10">
+            <div className="p-4 sm:p-6 bg-slate-950 flex flex-col space-y-2 border-t border-slate-800">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-lg bg-gold-accent/15 border border-gold-accent/30 text-gold-light font-caps uppercase text-[11px] font-medium">
+                <span className="px-3 py-1 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 font-caps uppercase text-[11px] font-semibold">
                   {currentPhoto.albumName}
                 </span>
                 <span className="text-[12px] font-mono text-slate-400">
@@ -417,11 +415,11 @@ export default function GalleryPage() {
               <h3 className="font-display font-bold text-[17px] sm:text-[22px] text-white uppercase">
                 {currentPhoto.title}
               </h3>
-              <p className="text-[14px] text-on-surface-variant font-light">
+              <p className="text-[14px] text-slate-300 font-normal">
                 {currentPhoto.caption}
               </p>
               <div className="flex items-center gap-4 text-[12px] font-mono text-slate-400 pt-1">
-                <span className="flex items-center gap-1 text-gold-light">
+                <span className="flex items-center gap-1 text-amber-400">
                   <span className="material-symbols-outlined text-[15px]">location_on</span>
                   {currentPhoto.location}
                 </span>

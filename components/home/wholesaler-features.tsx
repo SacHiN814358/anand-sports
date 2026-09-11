@@ -30,33 +30,33 @@ const features = [
 
 export function WholesalerFeatures() {
   return (
-    <section className="w-full bg-surface py-14 sm:py-24 border-b border-border-subtle overflow-hidden" id="wholesale">
+    <section className="w-full bg-[#F3EEE5] py-14 sm:py-24 border-b border-[#E8E1D3] overflow-hidden" id="wholesale">
       <div className="max-w-[1360px] mx-auto px-4 md:px-8">
         <Reveal variant="down">
           <div className="flex flex-col items-center text-center mb-10 sm:mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 text-gold-light font-caps uppercase tracking-widest text-[12px] font-semibold">
+            <div className="inline-flex items-center gap-2 text-amber-700 font-caps uppercase tracking-widest text-[12px] font-semibold">
               <span className="material-symbols-outlined text-[16px]">inventory_2</span>
               Why Choose Us
             </div>
-            <h2 className="font-display font-bold text-[26px] sm:text-[32px] md:text-[44px] uppercase tracking-tight text-white leading-tight max-w-2xl">
-              Wholesaler of top sports brand
+            <h2 className="font-display font-bold text-[28px] sm:text-[36px] md:text-[44px] uppercase tracking-tight text-slate-900 leading-tight max-w-2xl">
+              Wholesaler of top sports brands
             </h2>
-            <div className="w-16 h-0.5 bg-gold-accent rounded-full" />
+            <div className="w-16 h-1 bg-amber-500 rounded-full" />
           </div>
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 sm:mb-14">
           {features.map((f, i) => (
             <Reveal key={f.title} delay={i * 150} variant={f.animation}>
-              <div className="h-full group p-5 sm:p-8 rounded-2xl bg-white/[0.02] border border-border-subtle hover:border-gold-accent/40 hover:bg-white/[0.04] transition-all flex flex-col gap-5">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gold-accent/10 border border-gold-accent/25 flex items-center justify-center group-hover:bg-gold-accent/20 transition-colors">
-                  <span className="material-symbols-outlined text-[24px] sm:text-[28px] text-gold-accent">{f.icon}</span>
+              <div className="h-full group p-5 sm:p-8 rounded-2xl bg-white border border-[#E8E1D3] hover:border-amber-400 transition-all flex flex-col gap-5 shadow-xs hover:shadow-md">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#FAF7F2] border border-amber-200 flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                  <span className="material-symbols-outlined text-[24px] sm:text-[28px] text-amber-700 group-hover:text-slate-950 transition-colors">{f.icon}</span>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-display font-bold text-[16px] sm:text-[18px] uppercase text-white tracking-wide">
+                  <h3 className="font-display font-bold text-[16px] sm:text-[18px] uppercase text-slate-900 tracking-wide">
                     {f.title}
                   </h3>
-                  <p className="text-[13px] text-on-surface-variant leading-relaxed font-light">
+                  <p className="text-[13px] text-slate-600 leading-relaxed font-normal">
                     {f.description}
                   </p>
                 </div>
@@ -69,7 +69,7 @@ export function WholesalerFeatures() {
           <div className="flex justify-center">
             <Link
               href="/products"
-              className="px-8 py-3.5 sm:px-10 sm:py-4 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 hover:from-amber-400 hover:to-gold-light text-black font-bold font-caps uppercase tracking-wider text-[14px] shadow-[0_14px_32px_rgba(245,158,11,0.28)] flex items-center gap-2.5 transition-all group"
+              className="px-8 py-3.5 sm:px-10 sm:py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold font-caps uppercase tracking-wider text-[14px] shadow-xs flex items-center gap-2.5 transition-all group"
             >
               <span className="material-symbols-outlined text-[20px]">shopping_bag</span>
               Shop Now

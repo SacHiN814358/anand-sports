@@ -19,11 +19,11 @@ export async function CategoryGrid() {
   const categories = await getCategories()
 
   return (
-    <section className="section-padding py-24 bg-background">
+    <section className="section-padding py-12 sm:py-16 bg-background">
       <div className="container mx-auto">
-        <div className="mb-12">
-          <p className="text-muted-foreground text-sm font-bold tracking-widest uppercase mb-2">BROWSE BY</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground">CATEGORY</h2>
+        <div className="mb-8 sm:mb-10">
+          <p className="text-amber-700 text-xs font-bold tracking-widest uppercase mb-1.5 font-caps">BROWSE BY</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display uppercase tracking-tight text-foreground">CATEGORY</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
@@ -31,17 +31,9 @@ export async function CategoryGrid() {
             <Link 
               key={category.id} 
               href={`/products/${category.slug}`}
-              className="group bg-card text-card-foreground border border-border rounded-xl shadow-sm-hover relative overflow-hidden rounded-2xl p-6 aspect-square md:aspect-[4/3] flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:border-brand-accent/50"
+              className="group bg-white text-slate-900 border border-[#E8E1D3] shadow-sm relative overflow-hidden rounded-2xl p-6 aspect-square md:aspect-[4/3] flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:border-amber-400 hover:shadow-md"
             >
-              {/* Subtle Gradient Overlay */}
-              <div 
-                className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40"
-                style={{ 
-                  background: `linear-gradient(135deg, transparent, hsl(${(i * 45) % 360}, 70%, 50%))` 
-                }}
-              />
-              
-              <div className="relative z-10 text-foreground/70 group-hover:text-brand-accent transition-colors">
+              <div className="relative z-10 text-slate-700 group-hover:text-amber-600 transition-colors">
                 {getCategoryIcon(category.name)}
               </div>
 

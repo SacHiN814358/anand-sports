@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter, Oswald, Syne, Bebas_Neue, Montserrat } from 'next/font/google';
 import './globals.css';
@@ -5,6 +6,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { MobileBottomNav } from '@/components/layout/mobile-bottom-nav';
 import { WhatsAppWidget } from '@/components/ui/whatsapp-widget';
+import { RouteProgress } from '@/components/layout/route-progress';
 import { CartProvider } from '@/context/cart-context';
 import { cn } from '@/lib/utils';
 
@@ -56,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -77,6 +79,9 @@ export default function RootLayout({
         )}
       >
         <CartProvider>
+          <Suspense fallback={null}>
+            <RouteProgress />
+          </Suspense>
           <Header />
           <main className="flex-1 w-full">{children}</main>
           <Footer />

@@ -16,48 +16,48 @@ const partners = [
 
 export function BrandStrip() {
   return (
-    <section className="w-full bg-surface-dim py-14 sm:py-20 border-b border-border-subtle overflow-hidden" id="brands">
+    <section className="w-full bg-[#F3EEE5] py-14 sm:py-20 border-b border-[#E8E1D3] overflow-hidden" id="brands">
       <div className="max-w-[1360px] mx-auto px-4 md:px-8">
         <Reveal variant="left">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-14">
             <div>
-              <div className="inline-flex items-center gap-2 text-gold-light font-caps uppercase tracking-widest text-[12px] font-semibold mb-3">
+              <div className="inline-flex items-center gap-2 text-amber-700 font-caps uppercase tracking-widest text-[12px] font-semibold mb-3">
                 <span className="material-symbols-outlined text-[16px]">verified</span>
                 Authorised Distribution Rights
               </div>
-              <h2 className="font-display font-bold text-[24px] sm:text-[30px] md:text-[40px] uppercase tracking-tight text-white leading-tight">
+              <h2 className="font-display font-bold text-[26px] sm:text-[32px] md:text-[40px] uppercase tracking-tight text-slate-900 leading-tight">
                 Our Partners
               </h2>
             </div>
-            <p className="text-[13px] text-on-surface-variant max-w-sm font-light leading-relaxed">
+            <p className="text-[13px] text-slate-600 max-w-sm font-normal leading-relaxed">
               Direct appointed master wholesale stockist across East India. 100% authentic goods with factory warranty.
             </p>
           </div>
         </Reveal>
 
-        <div className="relative overflow-hidden w-full border-y border-white/5 py-4 bg-black/40 backdrop-blur-md">
+        <div className="relative overflow-hidden w-full border-y border-[#E8E1D3] py-4 bg-[#FAF7F2] shadow-xs">
           {/* Subtle Side Fade Gradients */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#090c10] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#090c10] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#FAF7F2] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#FAF7F2] to-transparent z-10 pointer-events-none" />
 
-          {/* Marquee Wrapper (Duplicated for Seamless Infinite Loop) */}
+          {/* Marquee Wrapper */}
           <div className="animate-marquee flex items-center gap-4">
             {[...partners, ...partners, ...partners].map((b, i) => (
               <div
                 key={`${b.name}-${i}`}
-                className="group shrink-0 px-6 py-3 rounded-xl bg-white/[0.03] hover:bg-gold-accent/15 border border-white/10 hover:border-gold-accent/40 flex items-center gap-3 transition-all duration-300 active:scale-95 cursor-default"
+                className="group shrink-0 px-6 py-3 rounded-xl bg-white hover:bg-amber-50/60 border border-[#E8E1D3] hover:border-amber-400 flex items-center gap-3 transition-all duration-300 shadow-2xs hover:shadow-sm cursor-default"
               >
                 {b.highlight && (
-                  <span className="w-2 h-2 rounded-full bg-gold-accent animate-pulse shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-blue-600 shrink-0" />
                 )}
                 <span
-                  className={`font-display font-bold text-[15px] sm:text-[17px] uppercase tracking-widest group-hover:text-gold-light transition-colors whitespace-nowrap ${
-                    b.highlight ? 'text-gold-light' : 'text-white/90'
+                  className={`font-display font-bold text-[15px] sm:text-[17px] uppercase tracking-widest transition-colors whitespace-nowrap ${
+                    b.highlight ? 'text-blue-900' : 'text-slate-800'
                   }`}
                 >
                   {b.name}
                 </span>
-                <span className="text-[10px] font-caps uppercase tracking-wider text-on-surface-variant/80 border-l border-white/10 pl-3">
+                <span className="text-[10px] font-caps uppercase tracking-wider text-slate-500 border-l border-[#E8E1D3] pl-3">
                   {b.note}
                 </span>
               </div>

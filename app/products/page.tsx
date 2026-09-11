@@ -100,7 +100,7 @@ const wholesaleProducts: ProductCategoryItem[] = [
     category: 'agility',
     categoryLabel: 'Cones, Hurdle & Agility',
     brands: ['TECHNO', 'ARYAN'],
-    image: 'https://images.unsplash.com/photo-1517649763962-0c623266010b?w=800&q=80',
+    image: '/images/products/agility-cones-hurdles.jpg',
     description: 'Flexible saucer cones, space markers, adjustable speed hurdles, agility ladders, and field marker poles for academies.',
     items: ['Saucer Cones', 'Space Markers', 'Speed Hurdles', 'Agility Ladders', 'Marker Poles'],
     badge: 'Academy Essential',
@@ -177,20 +177,18 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-surface">
       {/* Header Banner */}
-      <section className="relative py-14 sm:py-20 px-4 text-center bg-gradient-to-b from-white/[0.04] via-surface-dim to-surface border-b border-border-subtle overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(245,158,11,0.08),transparent)] pointer-events-none" />
-
-        <div className="relative max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-accent/10 border border-gold-accent/25 text-gold-light font-caps uppercase tracking-widest text-[11px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-accent animate-pulse" />
+      <section className="relative py-8 sm:py-12 px-4 text-center bg-[#F3EEE5] border-b border-[#E8E1D3] overflow-hidden">
+        <div className="relative max-w-2xl mx-auto space-y-2.5">
+          <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-caps uppercase tracking-widest text-[10.5px] font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
             Wholesale Catalog &bull; 15+ Top Brands
           </div>
 
-          <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-6xl uppercase tracking-tight text-white">
+          <h1 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl uppercase tracking-tight text-slate-900">
             Sports Collection
           </h1>
 
-          <p className="text-on-surface-variant text-[15px] sm:text-[17px] font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-[13px] sm:text-[14.5px] leading-relaxed max-w-xl mx-auto">
             Authorized B2B &amp; institutional supply lines for YONEX, TECHNO, NIVIA, COSCO, SG, DIDA, ARYAN &amp; ASI. Direct factory rates for retailers.
           </p>
         </div>
@@ -209,8 +207,8 @@ export default function ProductsPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-4 py-2 sm:px-5 sm:py-2.5 whitespace-nowrap shrink-0 rounded-xl font-caps uppercase tracking-wider text-[12px] font-medium transition-all duration-200 ${
                     active
-                      ? 'bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold shadow-[0_4px_14px_rgba(245,158,11,0.3)]'
-                      : 'bg-white/[0.03] hover:bg-white/[0.07] text-white/70 hover:text-white border border-border-medium'
+                      ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white font-bold shadow-md shadow-amber-500/20'
+                      : 'bg-white hover:bg-[#F3EEE5] text-slate-700 hover:text-slate-900 border border-[#E8E1D3] shadow-sm'
                   }`}
                 >
                   {tab.label}
@@ -221,12 +219,12 @@ export default function ProductsPage() {
         </div>
 
         {/* Results Counter */}
-        <div className="flex items-center justify-between mb-6 sm:mb-8 pb-3 border-b border-white/[0.07]">
-          <span className="text-[13px] font-mono text-slate-400">
+        <div className="flex items-center justify-between mb-6 sm:mb-8 pb-3 border-b border-[#E8E1D3]">
+          <span className="text-[13px] font-mono text-slate-500">
             Showing {filteredProducts.length} Wholesale Categories
           </span>
-          <span className="text-[11px] font-caps uppercase text-emerald-400 flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="text-[11px] font-caps uppercase text-emerald-700 font-semibold flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
             Direct Factory Stock Active
           </span>
         </div>
@@ -236,20 +234,23 @@ export default function ProductsPage() {
           {filteredProducts.map((item) => (
             <div
               key={item.id}
-              className="group rounded-2xl bg-white/[0.02] border border-border-subtle hover:border-gold-accent/40 hover:bg-white/[0.04] transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-lg"
+              className="group rounded-2xl bg-white border border-[#E8E1D3] hover:border-amber-400 hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-sm"
             >
               {/* Top Showcase Image */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-black/60">
+              <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
                   alt={item.title}
                   src={item.image}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-85"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/products/agility-cones-hurdles.jpg';
+                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#090c10] via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
                 {/* Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-lg bg-black/85 backdrop-blur-md border border-white/20 text-gold-light font-caps uppercase text-[10px] tracking-wider font-medium">
+                  <span className="px-3 py-1 rounded-lg bg-slate-900/80 backdrop-blur-md border border-white/20 text-amber-300 font-caps uppercase text-[10px] tracking-wider font-semibold">
                     {item.badge}
                   </span>
                 </div>
@@ -259,16 +260,16 @@ export default function ProductsPage() {
               <div className="p-4 sm:p-6 flex flex-col space-y-4 flex-1 justify-between">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-caps uppercase tracking-widest text-gold-light px-2 py-0.5 rounded bg-gold-accent/10 border border-gold-accent/20">
+                    <span className="text-[10px] font-caps uppercase tracking-widest text-amber-800 px-2 py-0.5 rounded bg-amber-50 border border-amber-200 font-semibold">
                       {item.categoryLabel}
                     </span>
                   </div>
 
-                  <h3 className="font-display font-bold text-[17px] sm:text-[20px] uppercase text-white group-hover:text-gold-light transition-colors leading-snug">
+                  <h3 className="font-display font-bold text-[17px] sm:text-[20px] uppercase text-slate-900 group-hover:text-amber-600 transition-colors leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-[13px] text-on-surface-variant font-light leading-relaxed">
+                  <p className="text-[13px] text-slate-600 font-normal leading-relaxed">
                     {item.description}
                   </p>
 
@@ -277,7 +278,7 @@ export default function ProductsPage() {
                     {item.items.map((sub, idx) => (
                       <span
                         key={idx}
-                        className="text-[10.5px] font-mono text-slate-300 px-2 py-0.5 rounded bg-white/[0.05] border border-white/10"
+                        className="text-[10.5px] font-mono text-slate-700 px-2 py-0.5 rounded bg-slate-100 border border-slate-200"
                       >
                         {sub}
                       </span>
@@ -286,12 +287,12 @@ export default function ProductsPage() {
                 </div>
 
                 {/* Authorised Brand Badges & Inquire Button */}
-                <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                   <div className="flex items-center gap-1.5 flex-wrap">
                     {item.brands.map((b) => (
                       <span
                         key={b}
-                        className="text-[9.5px] font-caps uppercase tracking-wider text-gold-light font-semibold px-1.5 py-0.5 rounded bg-gold-accent/10"
+                        className="text-[9.5px] font-caps uppercase tracking-wider text-amber-800 font-semibold px-1.5 py-0.5 rounded bg-amber-50 border border-amber-200"
                       >
                         {b}
                       </span>
@@ -300,7 +301,7 @@ export default function ProductsPage() {
 
                   <button
                     onClick={() => setQuoteItem(item)}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-gold-accent to-amber-500 hover:from-amber-400 hover:to-gold-light text-black font-bold font-caps uppercase text-[11px] tracking-wider transition-all shadow-[0_2px_10px_rgba(245,158,11,0.2)] active:scale-95 cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold font-caps uppercase text-[11px] tracking-wider transition-all shadow-sm active:scale-95 cursor-pointer"
                   >
                     <span>Inquire</span>
                     <span className="material-symbols-outlined text-[13px]">arrow_forward</span>
@@ -312,17 +313,17 @@ export default function ProductsPage() {
         </div>
 
         {/* Bottom Trade Inquiry Callout */}
-        <div className="mt-14 p-6 sm:mt-20 sm:p-10 rounded-2xl bg-gradient-to-r from-white/[0.03] via-white/[0.05] to-white/[0.03] border border-gold-accent/30 text-center space-y-4">
-          <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-tight text-white">
+        <div className="mt-14 p-6 sm:mt-20 sm:p-10 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-4 shadow-sm">
+          <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-tight text-slate-900">
             Need Tiered Wholesale Price List or Bulk Quotation?
           </h2>
-          <p className="text-on-surface-variant text-[14px] font-light max-w-xl mx-auto">
+          <p className="text-slate-600 text-[14px] max-w-xl mx-auto">
             Contact our central B2B wholesale desk in Cuttack &amp; Bhubaneswar for carton rates, institutional tender supply, and brand authorization.
           </p>
           <div className="pt-2 flex justify-center">
             <Link
               href="/contact"
-              className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 text-black font-bold font-caps uppercase tracking-wider text-[13px] hover:from-amber-400 hover:to-gold-light transition-all shadow-[0_4px_16px_rgba(245,158,11,0.25)] flex items-center gap-2 active:scale-95"
+              className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white font-bold font-caps uppercase tracking-wider text-[13px] hover:from-amber-600 hover:to-amber-700 transition-all shadow-md flex items-center gap-2 active:scale-95"
             >
               <span className="material-symbols-outlined text-[16px]">call</span>
               Request B2B Trade Price Sheet

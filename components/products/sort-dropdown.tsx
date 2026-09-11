@@ -17,7 +17,7 @@ export function SortDropdown({ currentSort, onSortChange, className }: SortDropd
       <select
         value={currentSort || 'popular'}
         onChange={(e) => onSortChange(e.target.value)}
-        className="h-10 pl-9 pr-8 appearance-none bg-card border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-brand-accent cursor-pointer min-w-[160px]"
+        className="h-10 pl-9 pr-8 appearance-none bg-card border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-amber-500 cursor-pointer min-w-[160px]"
       >
         <option value="popular">Popular</option>
         <option value="price_asc">Price: Low to High</option>

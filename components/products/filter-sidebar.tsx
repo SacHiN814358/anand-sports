@@ -39,10 +39,10 @@ export function FilterSidebar({
   };
 
   return (
-    <div className={cn("bg-card text-card-foreground border border-border rounded-xl shadow-sm p-6 rounded-2xl sticky top-24", className)}>
-      <div className="flex items-center gap-2 mb-6 pb-4 border-b border-border">
-        <SlidersHorizontal className="h-5 w-5 text-brand-accent" />
-        <h2 className="text-lg font-semibold text-foreground tracking-wide">FILTERS</h2>
+    <div className={cn("bg-white text-slate-900 border border-slate-200 shadow-sm p-6 rounded-2xl sticky top-24", className)}>
+      <div className="flex items-center gap-2 mb-6 pb-4 border-b border-slate-200">
+        <SlidersHorizontal className="h-5 w-5 text-amber-600" />
+        <h2 className="text-lg font-semibold text-slate-900 tracking-wide">FILTERS</h2>
       </div>
 
       <div className="space-y-6">
@@ -137,7 +137,7 @@ export function FilterSidebar({
                 onChange={(e) => handleApply({ ...localFilters, in_stock: e.target.checked })}
               />
               {localFilters.in_stock && (
-                <svg className="w-3.5 h-3.5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-3.5 h-3.5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               )}
