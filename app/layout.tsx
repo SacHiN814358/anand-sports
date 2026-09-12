@@ -48,8 +48,40 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://anandsports.com'),
   title: 'Anand Sports — Master Athletic Equipment & Sportswear Distributor Since 1984',
   description: "East India's master distributor for 15+ world-class athletic brands. Serving institutional buyers, tier-1 authorized dealers, and professional athletes.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  openGraph: {
+    title: 'Anand Sports — Master Athletic Equipment & Sportswear Distributor Since 1984',
+    description: "East India's master distributor for 15+ world-class athletic brands. Serving institutional buyers, tier-1 authorized dealers, and professional athletes.",
+    url: 'https://anandsports.com',
+    siteName: 'Anand Sports',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Anand Sports Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Anand Sports — Master Athletic Equipment & Sportswear Distributor Since 1984',
+    description: "East India's master distributor for 15+ world-class athletic brands. Serving institutional buyers, tier-1 authorized dealers, and professional athletes.",
+    images: ['/images/og-image.png'],
+  },
 };
 
 export default function RootLayout({
