@@ -47,8 +47,10 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://anand-sports.vercel.app';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://anandsports.com'),
+  metadataBase: new URL(baseUrl),
   title: 'Anand Sports — Master Athletic Equipment & Sportswear Distributor Since 1984',
   description: "East India's master distributor for 15+ world-class athletic brands. Serving institutional buyers, tier-1 authorized dealers, and professional athletes.",
   icons: {
@@ -63,7 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Anand Sports — Master Athletic Equipment & Sportswear Distributor Since 1984',
     description: "East India's master distributor for 15+ world-class athletic brands. Serving institutional buyers, tier-1 authorized dealers, and professional athletes.",
-    url: 'https://anandsports.com',
+    url: baseUrl,
     siteName: 'Anand Sports',
     locale: 'en_IN',
     type: 'website',
